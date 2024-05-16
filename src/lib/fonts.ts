@@ -1,7 +1,7 @@
 import { Dancing_Script, Poppins } from "next/font/google";
 
 export const poppins = Poppins({
-  weight: ["100", "400", "600"],
+  weight: ["100", "400", "500", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",

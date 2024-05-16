@@ -17,10 +17,32 @@ const config = {
         "2xl": "1440px",
       },
     },
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      black: "#696984",
+      white: "#fff",
+      blue: {
+        bg: "#012060",
+        bgTwo: "#082D79",
+        title: "#2F327D",
+        txt: "#696984",
+      },
+      orange: {
+        bg: "#F48C06",
+        bgTwo: "#F28301",
+      },
+      gray: {
+        bg: "#F4F7FA",
+        txt: "#E5EDFC",
+      },
+    },
     fontWeight: {
       thin: "100",
       normal: "400",
-      bold: "600",
+      medium: "500",
+      semibold: "600",
+      bold: "700",
     },
     extend: {
       fontFamily: {

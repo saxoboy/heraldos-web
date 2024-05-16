@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "~/logo.jpeg";
+import Logo from "~/images/logo-heraldos-de-cristo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
@@ -23,7 +23,7 @@ const Navbar = () => {
     setSideMenue(false);
   }
   return (
-    <div className="flex justify-between md:justify-center items-center p-4 container w-full mx-auto">
+    <div className="flex justify-between md:justify-center items-center p-4 pt-9 container w-full mx-auto">
       <nav
         ref={animationParent}
         className="flex flex-col lg:flex-row justify-around items-center gap-4 xl:gap-8 lg:w-full"
@@ -44,7 +44,7 @@ const Navbar = () => {
           {mainMenu.map((d, i) => (
             <li key={i} className="relative group px-2 py-3 transition-all">
               <Link key={i} href={d.link ?? "#"}>
-                <p className="flex cursor-pointer items-center gap-2 group-hover:text-red-500 mb-0">
+                <p className="flex cursor-pointer items-center gap-2 group-hover:text-blue-txt mb-0">
                   <span>{d.label}</span>
                   {d.children && (
                     <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />

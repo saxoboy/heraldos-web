@@ -12,46 +12,50 @@ export const mainMenu: NavItem[] = [
   },
   {
     label: "Nosotros",
-    link: "#",
+    link: "/nosotros",
     children: [
       {
-        label: "Nosotros",
-        link: "/nosotros",
+        label: "Junta Ejecutiva",
+        link: "/nosotros/junta-ejecutiva",
       },
       {
-        label: "Calendar",
-        link: "#",
+        label: "Vicepresidentes de condados",
+        link: "/nosotros/vicepresidentes-de-condados",
+      },
+      {
+        label: "Presidentes de paises foraneos",
+        link: "/nosotros/presidentes-de-paises-foraneos",
       },
     ],
   },
   {
     label: "Multimedia",
-    link: "#",
+    link: "/multimedia",
   },
   {
     label: "Eventos",
-    link: "#",
+    link: "/eventos",
   },
   {
     label: "Noticias",
-    link: "#",
+    link: "/noticias",
   },
   {
     label: "Documentos",
-    link: "#",
+    link: "/documentos",
     children: [
       {
-        label: "Todo list",
-        link: "#",
+        label: "Reglamentos",
+        link: "/documentos/reglamentos",
       },
       {
-        label: "Calendar",
-        link: "#",
+        label: "Formularios",
+        link: "/documentos/formularios",
       },
     ],
   },
   {
     label: "Contactos",
-    link: "#",
+    link: "/contactos",
   },
 ];
