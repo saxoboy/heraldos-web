@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/constant/config";
-import { dancingScript, poppins } from "@/lib/fonts";
+import { poppins } from "@/lib/fonts";
+import VideoHero from "@/components/video-hero";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -52,14 +52,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="es" suppressHydrationWarning>
         <head />
-        <body className={`${dancingScript.variable} ${poppins.variable}`}>
+        <body className={`${poppins.variable} ${poppins.className}`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar />
             {children}
           </ThemeProvider>
         </body>

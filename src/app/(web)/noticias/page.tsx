@@ -1,7 +1,11 @@
-import React from "react";
+import HeaderSection from "@/components/header-section";
 
 const NoticiasPage = () => {
-  return <div>NoticiasPage</div>;
+  return (
+    <>
+      <HeaderSection />
+    </>
+  );
 };
 
 export default NoticiasPage;

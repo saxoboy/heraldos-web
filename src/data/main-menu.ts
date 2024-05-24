@@ -20,11 +20,11 @@ export const mainMenu: NavItem[] = [
       },
       {
         label: "Vicepresidentes de condados",
-        link: "/nosotros/vicepresidentes-de-condados",
+        link: "/nosotros/vicepresidentes-condados",
       },
       {
         label: "Presidentes de paises foraneos",
-        link: "/nosotros/presidentes-de-paises-foraneos",
+        link: "/nosotros/presidentes-paises-foraneos",
       },
     ],
   },

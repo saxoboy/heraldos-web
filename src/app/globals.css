@@ -90,10 +90,10 @@ body,
   }
 
   .shadowVideo {
-    @apply absolute top-0 left-0 w-full h-full z-0 opacity-75;
+    @apply absolute top-0 left-0 w-full h-full z-0 opacity-75 bg-gradient-to-b from-blue-bg to-[#932616];
   }
   .txtVideoHero {
-    @apply absolute text-4xl font-bold z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center;
+    @apply absolute z-10 top-2/3 sm:top-1/2 md:top-2/3 xl:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full text-white;
   }
   .mask-image {
     mask-image: linear-gradient(#000 85%, #0000 100%);
