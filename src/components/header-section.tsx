@@ -4,7 +4,7 @@ const HeaderSection = () => {
   return (
     <div>
       <h1 className="hidden sm:block text-4xl md:text-5xl font-bold sm:py-4 text-center text-white">
-        <TitleHeader />
+        <TitleHeader txtTitle={"algo"} txtSubtitle={"algo"} />
       </h1>
     </div>
   );

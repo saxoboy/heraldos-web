@@ -62,7 +62,7 @@ const Navbar = () => {
               }`}
             >
               <Link href={item.link ?? "#"}>
-                <p className="flex cursor-pointer items-center gap-1 group-hover:text-white mb-0">
+                <p className="flex cursor-pointer text-white items-center gap-1 group-hover:text-white mb-0">
                   <span>{item.label}</span>
                   {item.children && (
                     <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />

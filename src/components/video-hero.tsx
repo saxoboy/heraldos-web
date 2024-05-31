@@ -26,7 +26,7 @@ const VideoHero = () => {
             Heraldos <span className="text-2xl md:text-4xl font-thin">de</span>{" "}
             Cristo C.L.A.
           </h1>
-          <p className="text-sm sm:text-xl md:text-2xl font-thin m-0">
+          <p className="text-sm sm:text-xl md:text-2xl font-thin m-0 text-white">
             <span className="font-bold">¡Preparando lideres</span> para el Reino
             de Dios!
           </p>
