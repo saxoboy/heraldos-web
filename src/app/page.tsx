@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, MoveRight } from "lucide-react";
+import {
+  ArrowRightIcon,
+  Calendar,
+  CalendarDaysIcon,
+  MoveRight,
+} from "lucide-react";
 import { EmblaOptionsType } from "embla-carousel";
 import VideoHero from "@/components/video-hero";
 import Title from "@/components/title";
@@ -14,6 +19,9 @@ import LogoJovenes from "~/images/icon-asociacion-jovenes.png";
 import LogoDamas from "~/images/icon-damas.png";
 
 import "./embla.css";
+import ShapeTop from "@/components/ui/shape-top";
+import ShapeBottom from "@/components/ui/shape-bottom";
+import { Badge } from "@/components/ui/badge";
 
 export interface GaleryType {
   id: number;
@@ -22,9 +30,7 @@ export interface GaleryType {
   link: string;
 }
 
-const OPTIONS: EmblaOptionsType = { containScroll: false };
-const SLIDE_COUNT = 6;
-//const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+const OPTIONS: EmblaOptionsType = { containScroll: false, loop: true };
 const SLIDES: GaleryType[] = [
   {
     id: 1,
@@ -155,23 +161,7 @@ export default function Home() {
       </section>
 
       <section className="bg-[#F7F9FA] relative my-12">
-        <div
-          className="absolute left-0 w-full overflow-hidden hidden lg:block bg-white"
-          style={{ lineHeight: 0 }}
-        >
-          <svg
-            data-name="Gray Shape Top"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 113"
-            preserveAspectRatio="none"
-            className="relative block w-full h-[100px]"
-          >
-            <path
-              d="M600,7.23C931.37,7.23,1200,54.48,1200,112.77H0V112.77C0,54.48,268.63,7.23,600,7.23Z"
-              className="shape-fill-top"
-            />
-          </svg>
-        </div>
+        <ShapeTop />
         <div className="container mx-auto py-12">
           <TitleHeader
             txtTitle="Eventos"
@@ -179,8 +169,8 @@ export default function Home() {
             txtSubtitleTwo="próximos eventos"
           />
           <p className="text-center">
-            Revisa las noticias más importantes de nuestra Asociación de
-            Caballeros
+            Entérate de nuestros próximos eventos y toda la información
+            relacionada a ellos
           </p>
 
           <div className="flex flex-col lg:flex-row justify-center items-start space-x-4 py-12">
@@ -272,25 +262,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div
-          className="absolute bottom-0 left-0 w-full overflow-hidden hidden lg:block"
-          style={{
-            lineHeight: 0,
-          }}
-        >
-          <svg
-            data-name="Gray Shape Bottom"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-            className="relative block w-full h-[100px]"
-          >
-            <path
-              d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
-              className="shape-fill"
-            />
-          </svg>
-        </div>
+        <ShapeBottom />
       </section>
 
       <section className="relative my-12">
@@ -312,6 +284,218 @@ export default function Home() {
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </div>
         </div>
+      </section>
+
+      <section className="bg-[#F7F9FA] relative my-12">
+        <ShapeTop />
+        <div className="container mx-auto py-32">
+          <TitleHeader
+            txtTitle="Noticias"
+            txtSubtitle="Noticias recientes sobre"
+            txtSubtitleTwo="Heraldos de Cristo"
+          />
+          <p className="text-center">
+            Revisa las noticias más importantes de nuestra Asociación de
+            Caballeros
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="w-full transition-all hover:shadow-xl">
+              <div className="relative p-4">
+                <Image
+                  src="/images/events/evento-1.jpeg"
+                  alt="Campamento de líderes ACHC"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto mx-auto rounded-xl z-0"
+                  loading="lazy"
+                />
+              </div>
+              <CardContent className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <Badge variant="secondary">Congresos</Badge>
+                  <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
+                    <CalendarDaysIcon className="h-5 w-5" />
+                    <span className="text-sm">25 Julio 2024</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold">
+                  ¿Cómo mejorar mi relación con Dios día a día?
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua...
+                </p>
+                <Button variant="ghost" className="justify-self-end">
+                  <ArrowRightIcon className="h-5 w-5" />
+                </Button>
+              </CardContent>
+            </Card>
+            <div className="grid grid-cols-1 gap-4">
+              <Card className="w-full transition-all hover:shadow-xl">
+                <div className="flex flex-col lg:flex-row">
+                  <div className="w-full lg:w-2/5 relative p-4">
+                    <Image
+                      src="/images/events/evento-1.jpeg"
+                      alt="Campamento de líderes ACHC"
+                      width={350}
+                      height={350}
+                      className="w-full h-auto mx-auto rounded-xl z-0"
+                      loading="lazy"
+                    />
+                    <Badge
+                      variant="secondary"
+                      className=" absolute top-8 left-8"
+                    >
+                      Congresos
+                    </Badge>
+                  </div>
+                  <div className="w-full lg:w-3/5">
+                    <CardContent className="space-y-4 p-4">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
+                          <CalendarDaysIcon className="h-5 w-5" />
+                          <span className="text-sm">25 Julio 2024</span>
+                        </div>
+                        <div>
+                          <Button
+                            variant="outline"
+                            className="justify-self-end"
+                            size="icon"
+                          >
+                            <Link href="/noticias">
+                              <ArrowRightIcon className="h-5 w-5" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-semibold xl:truncate">
+                        ¿Cómo mejorar mi relación con Dios día a día?
+                      </h3>
+                      <p className="block lg:hidden xl:block">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua...
+                      </p>
+                    </CardContent>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="w-full transition-all hover:shadow-xl">
+                <div className="flex flex-col lg:flex-row">
+                  <div className="w-full lg:w-2/5 relative p-4">
+                    <Image
+                      src="/images/events/evento-1.jpeg"
+                      alt="Campamento de líderes ACHC"
+                      width={280}
+                      height={180}
+                      className="w-full h-auto mx-auto rounded-xl z-0"
+                      loading="lazy"
+                    />
+                    <Badge
+                      variant="secondary"
+                      className=" absolute top-8 left-8"
+                    >
+                      Congresos
+                    </Badge>
+                  </div>
+                  <div className="w-full lg:w-3/5">
+                    <CardContent className="space-y-4 p-4">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
+                          <CalendarDaysIcon className="h-5 w-5" />
+                          <span className="text-sm">25 Julio 2024</span>
+                        </div>
+                        <div>
+                          <Button
+                            variant="outline"
+                            className="justify-self-end"
+                            size="icon"
+                          >
+                            <Link href="/noticias">
+                              <ArrowRightIcon className="h-5 w-5" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-semibold xl:truncate">
+                        ¿Cómo mejorar mi relación con Dios día a día?
+                      </h3>
+                      <p className="block lg:hidden xl:block">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua...
+                      </p>
+                    </CardContent>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="w-full transition-all hover:shadow-xl">
+                <div className="flex flex-col lg:flex-row">
+                  <div className="w-full lg:w-2/5 relative p-4">
+                    <Image
+                      src="/images/events/evento-1.jpeg"
+                      alt="Campamento de líderes ACHC"
+                      width={280}
+                      height={180}
+                      className="w-full h-auto mx-auto rounded-xl z-0"
+                      loading="lazy"
+                    />
+                    <Badge
+                      variant="secondary"
+                      className=" absolute top-8 left-8"
+                    >
+                      Congresos
+                    </Badge>
+                  </div>
+                  <div className="w-full lg:w-3/5">
+                    <CardContent className="space-y-4 p-4">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
+                          <CalendarDaysIcon className="h-5 w-5" />
+                          <span className="text-sm">25 Julio 2024</span>
+                        </div>
+                        <div>
+                          <Button
+                            variant="outline"
+                            className="justify-self-end"
+                            size="icon"
+                          >
+                            <Link href="/noticias">
+                              <ArrowRightIcon className="h-5 w-5" />
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-semibold xl:truncate">
+                        ¿Cómo mejorar mi relación con Dios día a día?
+                      </h3>
+                      <p className="block lg:hidden xl:block">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua...
+                      </p>
+                    </CardContent>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+
+          <div className="flex justify-center mt-8">
+            <Button className="mt-4" variant="outline">
+              <Link href="/noticias">Ver todas las noticias</Link>
+            </Button>
+          </div>
+          
+        </div>
+        <ShapeBottom />
       </section>
     </>
   );

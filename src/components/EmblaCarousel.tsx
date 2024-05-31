@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { EmblaOptionsType } from "embla-carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {
   PrevButton,
@@ -18,7 +19,9 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [
+    Autoplay({ playOnInit: true, delay: 3000 }),
+  ]);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -37,14 +40,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((galery: GaleryType) => (
             <div className="embla__slide" key={galery.id}>
               <div className="embla__slide__number">
-                <Image
-                  src={galery.src}
-                  alt={galery.title}
-                  width={348}
-                  height={390}
-                  className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
-                  loading="lazy"
-                />
+                <Link href={galery.link}>
+                  <Image
+                    src={galery.src}
+                    alt={galery.title}
+                    width={348}
+                    height={390}
+                    className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
+                    loading="lazy"
+                  />
+                </Link>
                 <p className="px-4">{galery.title}</p>
               </div>
             </div>

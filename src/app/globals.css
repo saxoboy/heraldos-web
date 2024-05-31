@@ -125,7 +125,7 @@ body,
     fill: var(--shape-fill-color-top);
   }
   :root {
-    --shape-fill-color-top: #f4f7fa;
+    --shape-fill-color-top: #f7f9fa;
   }
   .dark {
     --shape-fill-color-top: #020817;
