@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Video from "next-video";
 import videoLoop from "/videos/video-home.mp4?thumbnailTime=0";
-import Navbar from "./navbar";
 import { Button } from "./ui/button";
 
 const VideoHero = () => {
@@ -19,10 +18,6 @@ const VideoHero = () => {
           className="w-full object-cover relative mask-image"
         />
         <div className="shadowVideo" />
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full z-50">
-          <Navbar />
-        </div>
-
         <div className="txtVideoHero">
           <h3 className="text-xs sm:text-base md:text-xl lg:text-xl text-orange-bg font-normal uppercase md:leading-8 md:tracking-[4px] lg:tracking-[6px] xl:tracking-[8px]">
             - Bienvenidos a la página oficial -
@@ -36,12 +31,32 @@ const VideoHero = () => {
             de Dios!
           </p>
           <Button
-            className="mt-4 hidden sm:inline-block"
+            className="mt-4 hidden sm:inline-block px-6 py-3 h-auto"
             variant="secondary"
             asChild
           >
             <Link href="/nosotros">Conoce más</Link>
           </Button>
+        </div>
+        <div
+          className="absolute bottom-0 left-0 w-full overflow-hidden hidden lg:block"
+          style={{
+            lineHeight: 0,
+          }}
+        >
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="relative block w-full h-[100px]"
+          >
+            <path
+              d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+              className="shape-fill"
+              fill="white"
+            />
+          </svg>
         </div>
       </div>
     </section>

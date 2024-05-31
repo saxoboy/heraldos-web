@@ -4,6 +4,8 @@ import { siteConfig } from "@/constant/config";
 import { poppins } from "@/lib/fonts";
 import VideoHero from "@/components/video-hero";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -59,7 +61,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
             enableSystem
             disableTransitionOnChange
           >
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full z-30">
+              <Navbar />
+            </div>
             {children}
+            <Footer />
           </ThemeProvider>
         </body>
       </html>
