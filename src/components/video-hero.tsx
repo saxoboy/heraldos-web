@@ -1,14 +1,22 @@
 import React from "react";
 import Link from "next/link";
-import Video from "next-video";
-import videoLoop from "/videos/video-home.mp4?thumbnailTime=0";
+// import Video from "next-video";
+// import videoLoop from "/videos/video-home.mp4?thumbnailTime=0";
 import { Button } from "./ui/button";
 
 const VideoHero = () => {
   return (
     <section className="bg-gradient-to-b from-blue-bg to-[#932616] relative">
       <div className="relative p-0">
-        <Video
+        <video
+          src="/videos/video-home.mp4?thumbnailTime=0"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full object-cover relative mask-image"
+        />
+        {/* <Video
           src={videoLoop}
           autoPlay
           muted
@@ -16,7 +24,7 @@ const VideoHero = () => {
           playsInline
           controls={false}
           className="w-full object-cover relative mask-image"
-        />
+        /> */}
         <div className="shadowVideo" />
         <div className="txtVideoHero">
           <h3 className="text-xs sm:text-base md:text-xl lg:text-xl text-orange-bg font-normal uppercase md:leading-8 md:tracking-[4px] lg:tracking-[6px] xl:tracking-[8px]">
