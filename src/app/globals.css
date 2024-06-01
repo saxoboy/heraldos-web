@@ -142,7 +142,7 @@ body,
   }
 
   .titleStroke {
-    -webkit-text-stroke: 1px #f0f4fc;
+    -webkit-text-stroke: 1px #e5edfc;
   }
   .dark .titleStroke {
     -webkit-text-stroke: 1px #082d79;
