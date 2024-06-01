@@ -9,7 +9,7 @@ const TitleHeader = ({ txtTitle, txtSubtitle, txtSubtitleTwo }: TitleProps) => {
     <div className="relative w-full">
       <h1
         className="leading-[162px] font-bold text-9xl text-transparent lowercase text-center"
-        style={{ WebkitTextStroke: "1px #F0F4FC" }}
+        style={{ WebkitTextStroke: "1px #E5EDFC" }}
       >
         {txtTitle}
       </h1>
