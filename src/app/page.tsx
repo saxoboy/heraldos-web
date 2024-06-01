@@ -13,15 +13,16 @@ import TitleHeader from "@/components/title-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import EmblaCarousel from "@/components/EmblaCarousel";
+import ShapeTop from "@/components/ui/shape-top";
+import ShapeBottom from "@/components/ui/shape-bottom";
+import { Badge } from "@/components/ui/badge";
+import ShapeTopOrange from "@/components/ui/shape-top-orange";
 import LogoAsociacionNinos from "~/images/icon-asociacion-ninos.png";
 import LogoConcilioLatino from "~/images/icon-concilio-latinoamericano.png";
 import LogoJovenes from "~/images/icon-asociacion-jovenes.png";
 import LogoDamas from "~/images/icon-damas.png";
 
 import "./embla.css";
-import ShapeTop from "@/components/ui/shape-top";
-import ShapeBottom from "@/components/ui/shape-bottom";
-import { Badge } from "@/components/ui/badge";
 
 export interface GaleryType {
   id: number;
@@ -174,7 +175,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col lg:flex-row justify-center items-start space-x-4 py-12">
-            <Card className="w-[350px]">
+            <Card className="w-[350px] transition-all hover:shadow-xl">
               <Image
                 src="/images/events/evento-1.jpeg"
                 alt="Campamento de líderes ACHC"
@@ -201,7 +202,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="w-[350px]">
+            <Card className="w-[350px] transition-all hover:shadow-xl">
               <Image
                 src="/images/events/evento-1.jpeg"
                 alt="Campamento de líderes ACHC"
@@ -228,7 +229,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="w-[350px]">
+            <Card className="w-[350px] transition-all hover:shadow-xl">
               <Image
                 src="/images/events/evento-1.jpeg"
                 alt="Campamento de líderes ACHC"
@@ -286,9 +287,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#F7F9FA] relative my-12">
+      <section className="bg-[#F7F9FA] relative mt-12">
         <ShapeTop />
-        <div className="container mx-auto py-32">
+        <div className="container mx-auto pt-28 pb-0">
           <TitleHeader
             txtTitle="Noticias"
             txtSubtitle="Noticias recientes sobre"
@@ -488,14 +489,60 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-8 pb-8">
             <Button className="mt-4" variant="outline">
               <Link href="/noticias">Ver todas las noticias</Link>
             </Button>
           </div>
-          
         </div>
-        <ShapeBottom />
+        {/* <ShapeBottom /> */}
+      </section>
+
+      <section className="relative bg-orange-bg">
+        <ShapeTopOrange />
+        <div className="container flex flex-col lg:flex-row">
+          <div className="w-full flex flex-col md:flex-row lg:w-1/2 pb-0 pt-8">
+            <div className="w-full md:w-1/2 flex justify-center items-end">
+              <Image
+                src="/images/postularse.png"
+                alt=""
+                width={256}
+                height={342}
+                className="w-auto h-auto mx-auto relative z-10"
+              />
+            </div>
+            <div className="w-full md:w-1/2 flex flex-col justify-center items-center pt-12 lg:pt-24 pb-4">
+              <h3 className="text-2xl text-center">
+                ¿Desear ser parte de nosotros?
+              </h3>
+              <p className="text-white mb-0">Descarga tus documentos aquí</p>
+              <Button className="mt-4" variant="outline">
+                <Link href="/documentos">Descargar documentos</Link>
+              </Button>
+            </div>
+          </div>
+
+          <div className="w-full flex flex-col md:flex-row lg:w-1/2 pb-0 pt-8">
+            <div className="w-full md:w-1/2 flex justify-center items-end">
+              <Image
+                src="/images/corbata-heraldos.png"
+                alt=""
+                width={256}
+                height={342}
+                className="w-auto h-auto mx-auto relative z-10"
+              />
+            </div>
+            <div className="w-full md:w-1/2 flex flex-col justify-center items-center pt-12 lg:pt-24 pb-4">
+              <h3 className="text-2xl text-center">
+                ¡Adquiere tu artículo ahora!
+              </h3>
+              <p className="text-white mb-0">Corbatas y pings para tí</p>
+              <Button className="mt-4" variant="outline">
+                <Link href="/documentos">Hacer Pedidos</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );

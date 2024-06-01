@@ -12,13 +12,13 @@ export default function SeccionLayout({ children }: RootLayoutProps) {
         <Navbar />
       </div>
       <div className="bg-gradient-to-b from-blue-bg to-[#932616] relative">
-        <div className="relative p-0">
+        <div className="relative p-0 overflow-hidden">
           <Image
-            src="/images/bg-header.jpeg"
+            src="/images/junta-ejecutiva.jpeg"
             width={1440}
-            height={987}
+            height={520}
             alt="header"
-            className="w-full object-cover z-[-1]"
+            className="w-full z-[-1]"
           />
           <section className="bg-gradient-to-b from-blue-bg to-[#932616] w-full h-full absolute left-0 top-0 opacity-50" />
         </div>

@@ -131,6 +131,16 @@ body,
     --shape-fill-color-top: #020817;
   }
 
+  .shape-fill-top-orange {
+    fill: var(--shape-fill-color-top-orange);
+  }
+  :root {
+    --shape-fill-color-top-orange: #f48c06;
+  }
+  .dark {
+    --shape-fill-color-top-orange: #020817;
+  }
+
   .titleStroke {
     -webkit-text-stroke: 1px #f0f4fc;
   }

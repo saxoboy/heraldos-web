@@ -25,7 +25,7 @@ const Footer = () => {
               <h3 className="text-orange-bg text-2xl mb-6">Direcciones</h3>
               <div className="flex justify-normal items-start space-x-4 text-white">
                 <MapPin className="text-white text-2xl" />
-                <p className="w-52">
+                <p className="w-52 text-gray-txt">
                   661 Main St, Hackensack, NJ 07601, EE. UU.
                 </p>
               </div>
@@ -34,11 +34,11 @@ const Footer = () => {
               <h3 className="text-orange-bg text-2xl mb-6">Contactos</h3>
               <div className="flex justify-normal items-start space-x-4 text-white">
                 <Smartphone className="text-white text-2xl" />
-                <p className="w-52">Teléfono: +1 (240) 644-8582</p>
+                <p className="w-52 text-gray-txt">Teléfono: +1 (240) 644-8582</p>
               </div>
               <div className="flex justify-normal items-start space-x-4 text-white">
                 <Mail className="text-white text-2xl" />
-                <p className="w-52">E-mail: info@heraldoscristo.com</p>
+                <p className="w-52 text-gray-txt">E-mail: info@heraldoscristo.com</p>
               </div>
             </div>
             <div>
