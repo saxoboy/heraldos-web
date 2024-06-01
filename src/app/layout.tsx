@@ -1,8 +1,8 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/constant/config";
 import { poppins } from "@/lib/fonts";
-import VideoHero from "@/components/video-hero";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -66,6 +66,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </div>
             {children}
             <Footer />
+            <Analytics />
           </ThemeProvider>
         </body>
       </html>
