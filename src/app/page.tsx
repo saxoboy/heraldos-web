@@ -132,7 +132,7 @@ export default function Home() {
 
       <section className="relative my-12">
         <div className="container mx-auto flex flex-col lg:flex-row lg:space-x-4">
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <Image
               src="/images/home/sobre-nosotros.png"
               alt="Sobre nosotros"
@@ -142,7 +142,7 @@ export default function Home() {
               loading="lazy"
             />
           </div>
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <Title txtTitle="Nosotros" txtSubtitle="Sobre nosotros" />
             <h3 className="text-3xl font-bold text-blue-title dark:text-gray-txt mb-4">
               Asociación de caballeros{" "}
@@ -154,7 +154,10 @@ export default function Home() {
               buena noticia de salvación a través de nuestro Salvador y Señor
               Jesucristo, la única fuente de vida.
             </p>
-            <Button className="mt-4" variant="outline">
+            <Button
+              className="mt-4 mx-auto block lg:inline-block"
+              variant="outline"
+            >
               <Link href="/nosotros">Quiero conocer más</Link>
             </Button>
           </div>
@@ -174,7 +177,7 @@ export default function Home() {
             relacionada a ellos
           </p>
 
-          <div className="flex flex-col lg:flex-row justify-center items-start space-x-4 py-12">
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
             <Card className="w-[350px] transition-all hover:shadow-xl">
               <Image
                 src="/images/events/evento-1.jpeg"
@@ -267,8 +270,8 @@ export default function Home() {
       </section>
 
       <section className="relative my-12">
-        <div className="container flex">
-          <div className="w-2/5">
+        <div className="container flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+          <div className="w-full lg:w-2/5">
             <Title txtTitle="Galería" txtSubtitle="Multimedia" />
             <h3 className="text-3xl font-bold text-blue-title dark:text-gray-txt mb-4">
               Galería <span className="text-orange-bg">audiovisual</span>
@@ -277,11 +280,14 @@ export default function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
-            <Button className="mt-4" variant="outline">
+            <Button
+              className="mt-4 mx-auto block lg:inline-block"
+              variant="outline"
+            >
               <Link href="/galeria">Ir a multimedia</Link>
             </Button>
           </div>
-          <div className="w-3/5">
+          <div className="w-full lg:w-3/5">
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </div>
         </div>
