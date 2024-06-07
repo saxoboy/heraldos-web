@@ -64,7 +64,7 @@ const NoticiasPage = () => {
                       className="justify-self-end"
                       size="icon"
                     >
-                      <Link href={noticia.link}>
+                      <Link href={`/noticias/${noticia.slug}`}>
                         <ArrowRightIcon className="h-5 w-5" />
                       </Link>
                     </Button>
@@ -73,92 +73,6 @@ const NoticiasPage = () => {
               </div>
             </Card>
           ))}
-
-          {/* <Card className="w-full md:max-w-[350px] mb-4 transition-all hover:shadow-xl">
-            <div className="flex flex-col">
-              <div className="w-full relative p-4">
-                <Image
-                  src="/images/events/evento-1.jpeg"
-                  alt="Campamento de líderes ACHC"
-                  width={350}
-                  height={350}
-                  className="w-full h-auto mx-auto rounded-xl z-0"
-                  loading="lazy"
-                />
-                <Badge variant="secondary" className=" absolute top-8 left-8">
-                  Congresos
-                </Badge>
-              </div>
-              <div className="flex justify-center items-center space-x-2 bg-orange-bg text-white px-4 py-2 rounded-full mx-auto w-fit -top-9 relative">
-                <CalendarDaysIcon className="h-5 w-5" />
-                <span className="text-sm">25 Julio 2024</span>
-              </div>
-              <CardContent className="space-y-4 p-4">
-                <h3 className="text-xl font-semibold xl:truncate">
-                  ¿Cómo mejorar mi relación con Dios día a día?
-                </h3>
-                <p className="block lg:hidden xl:block">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua...
-                </p>
-                <div className="flex justify-center items-center">
-                  <Button
-                    variant="outline"
-                    className="justify-self-end"
-                    size="icon"
-                  >
-                    <Link href="/noticias">
-                      <ArrowRightIcon className="h-5 w-5" />
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </div>
-          </Card>
-
-          <Card className="w-full md:max-w-[350px] mb-4 transition-all hover:shadow-xl">
-            <div className="flex flex-col">
-              <div className="w-full relative p-4">
-                <Image
-                  src="/images/events/evento-1.jpeg"
-                  alt="Campamento de líderes ACHC"
-                  width={350}
-                  height={350}
-                  className="w-full h-auto mx-auto rounded-xl z-0"
-                  loading="lazy"
-                />
-                <Badge variant="secondary" className=" absolute top-8 left-8">
-                  Congresos
-                </Badge>
-              </div>
-              <div className="flex justify-center items-center space-x-2 bg-orange-bg text-white px-4 py-2 rounded-full mx-auto w-fit -top-9 relative">
-                <CalendarDaysIcon className="h-5 w-5" />
-                <span className="text-sm">25 Julio 2024</span>
-              </div>
-              <CardContent className="space-y-4 p-4">
-                <h3 className="text-xl font-semibold xl:truncate">
-                  ¿Cómo mejorar mi relación con Dios día a día?
-                </h3>
-                <p className="block lg:hidden xl:block">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua...
-                </p>
-                <div className="flex justify-center items-center">
-                  <Button
-                    variant="outline"
-                    className="justify-self-end"
-                    size="icon"
-                  >
-                    <Link href="/noticias">
-                      <ArrowRightIcon className="h-5 w-5" />
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </div>
-          </Card> */}
         </div>
       </section>
     </>

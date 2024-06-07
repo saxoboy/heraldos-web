@@ -1,9 +1,9 @@
-export type NavItem = {
+export interface NavItem {
   label: string;
   link?: string;
   children?: NavItem[];
   iconImage?: string;
-};
+}
 
 export const mainMenu: NavItem[] = [
   {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "@/components/navbar";
+import { BreadcrumbMain } from "@/components/breadcrumb";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -8,9 +8,6 @@ interface RootLayoutProps {
 export default function SeccionLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full z-20">
-        <Navbar />
-      </div>
       <div className="bg-gradient-to-b from-blue-bg to-[#932616] relative">
         <div className="relative p-0 overflow-hidden">
           <Image
@@ -20,7 +17,10 @@ export default function SeccionLayout({ children }: RootLayoutProps) {
             alt="header"
             className="w-full z-[-1]"
           />
-          <section className="bg-gradient-to-b from-blue-bg to-[#932616] w-full h-full absolute left-0 top-0 opacity-50" />
+          <section className="bg-gradient-to-b from-blue-bg from-50% to-[#932616] to-99% w-full h-full absolute left-0 top-0 opacity-75" />
+        </div>
+        <div className="absolute z-10 top-2/3 sm:top-1/2 md:top-2/3 xl:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full">
+          <BreadcrumbMain />
         </div>
         <div
           className="absolute bottom-0 left-0 w-full overflow-hidden hidden lg:block"
