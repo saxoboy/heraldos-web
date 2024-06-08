@@ -32,10 +32,33 @@ const JuntaEjecutivaPage = () => {
               Nuestra <span className="text-orange-bg">misión</span>
             </h4>
             <p>
-              Un heraldo es un mensajero o un vocero (portavoz). Por lo tanto,
-              nuestra misión como Heraldos De Cristo es: Pregonar al mundo la
-              buena noticia de salvación a través de nuestro Salvador y Señor
-              Jesucristo, la única fuente de vida.
+              Para poder conocer el significado del término heraldo, es
+              interesante comenzar descubriendo su origen etimológico. En este
+              caso, hay que subrayar que se trata de una palabra que deriva del
+              francés, concretamente de “heraut”, que puede traducirse como
+              “emisario” o incluso “mensajero”.
+            </p>
+
+            <p>
+              Hay que establecer que esa palabra era usada a partir del siglo
+              XII para referirse a los mensajeros de guerra que eran enviados
+              para dar un comunicado al bando rival, como podía ser, por
+              ejemplo, un ultimátum.
+            </p>
+
+            <p>
+              Un heraldo, por lo tanto, es un mensajero o un vocero (portavoz).
+              En la antigüedad, los heraldos eran oficiales que llevaban órdenes
+              de los monarcas, convocaban a quienes eran citados por los reyes o
+              silenciaban a la gente para que pudieran hablar los soberanos en
+              público. En ocasiones también ejecutaban las órdenes.
+            </p>
+
+            <p>
+              Tomando esta descripción como punto de partida, resumimos nuestra
+              misión como Heraldos De Cristo: Pregonar al mundo la buena noticia
+              de salvación a través de nuestro Salvador y Señor Jesucristo, la
+              única fuente de vida.
             </p>
           </div>
           <div className="w-full lg:w-1/2">

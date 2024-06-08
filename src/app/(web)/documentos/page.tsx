@@ -14,13 +14,20 @@ const DocumentosPage = () => {
             className="w-auto h-auto mx-auto relative z-10"
           />
           <h1 className="hidden sm:block text-4xl md:text-5xl font-bold sm:py-4 text-center text-white">
-            <TitleHeader txtTitle="Documentos" txtSubtitle="Reglamentos y Formularios" />
+            <TitleHeader
+              txtTitle="Documentos"
+              txtSubtitle="Reglamentos y Formularios"
+            />
           </h1>
         </div>
       </section>
-      <section className="relative">
-        <div className="h-96">
-          <h1 className="text-7xl text-center">Seccion en Construccion </h1>
+
+      <section className="relative flex flex-col lg:flex-row container space-y-4 mb-12">
+        <div className="w-full lg:w-1/2 text-center">
+          <h2>Formularios</h2>
+        </div>
+        <div className="w-full lg:w-1/2 text-center">
+          <h2>Documentos</h2>
         </div>
       </section>
     </>

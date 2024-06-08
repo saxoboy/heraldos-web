@@ -1,5 +1,8 @@
 import Image from "next/image";
 import TitleHeader from "@/components/title-header";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const ReglamentosPage = () => {
   return (
@@ -19,9 +22,64 @@ const ReglamentosPage = () => {
         </div>
       </section>
       <section className="relative">
-        <div className="h-96">
-          <h1 className="text-7xl text-center">Seccion en Construccion </h1>
-        </div>
+        <section className="relative container space-y-4 mb-12">
+          <Card>
+            <CardContent className="pt-6 flex justify-between items-center">
+              <h3 className="flex-1">
+                Forma de Solicitud para Candidatura para la Junta
+              </h3>
+              <div className="flex-1 text-center">PDF</div>
+              <Button className="w-fit" variant="secondary">
+                <Link
+                  href={
+                    "/documentos/Forma-de-Solicitud-para-Candidatura-para-la-Junta.pdf"
+                  }
+                  target="_blank"
+                >
+                  Descargar
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="pt-6 flex justify-between items-center">
+              <h3 className="flex-1">
+                Formas Informes Pre-Convenciones Para Iglesias
+              </h3>
+              <div className="flex-1 text-center">PDF</div>
+              <Button className="w-fit" variant="secondary">
+                <Link
+                  href={
+                    "/documentos/Formas Informes Pre-Convenciones-Para-Iglesias.pdf"
+                  }
+                  target="_blank"
+                >
+                  Descargar
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="pt-6 flex justify-between items-center">
+              <h3 className="flex-1">
+                Forma de Informe Anual de VP de Condado
+              </h3>
+              <div className="flex-1 text-center">PDF</div>
+              <Button className="w-fit" variant="secondary">
+                <Link
+                  href={
+                    "/documentos/Forma-de-Informe-Anual-de-VP-de-Condado.pdf"
+                  }
+                  target="_blank"
+                >
+                  Descargar
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </section>
       </section>
     </>
   );

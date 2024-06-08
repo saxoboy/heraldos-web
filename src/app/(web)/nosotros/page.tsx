@@ -29,18 +29,16 @@ const NosotrosPage = () => {
           </div>
         </div>
       </section>
-      <section className="relative">
-        <div className="container">
-          <p className="mt-4">
-            Somos una comunidad de hombres que busca ser de bendición para
-            nuestra familia, iglesia y sociedad. Creemos que Dios nos ha llamado
-            a ser hombres de valor, que se levanten en medio de las adversidades
-            y que sean capaces de enfrentar los desafíos de la vida con
-            valentía, fe y esperanza.
-          </p>
+
+      <section className="relative flex flex-col lg:flex-row container space-y-4 lg:space-y-0 lg:space-x-4 mb-12">
+        <div className="w-full lg:w-1/3 text-center">
+          <h2>Junta Directiva</h2>
         </div>
-        <div className="h-96">
-          <h1 className="text-7xl text-center">Seccion en Construccion </h1>
+        <div className="w-full lg:w-1/3 text-center">
+          <h2>Presidentes de Paises Foreanos</h2>
+        </div>
+        <div className="w-full lg:w-1/3 text-center">
+          <h2>Vicepresidentes de Condados</h2>
         </div>
       </section>
     </>
