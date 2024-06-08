@@ -34,24 +34,29 @@ const NoticiasPage = () => {
             >
               <div className="flex flex-col">
                 <div className="w-full relative p-4">
-                  <Image
-                    src={noticia.image}
-                    alt={noticia.title}
-                    width={350}
-                    height={350}
-                    className="w-full h-auto mx-auto rounded-xl z-0"
-                    loading="lazy"
-                  />
-                  <Badge variant="secondary" className=" absolute top-8 left-8">
-                    {noticia.category}
-                  </Badge>
+                  <Link href={`/noticias/${noticia.slug}`}>
+                    <Image
+                      src={noticia.image}
+                      alt={noticia.title}
+                      width={350}
+                      height={350}
+                      className="w-full h-auto mx-auto rounded-xl z-0"
+                      loading="lazy"
+                    />
+                    <Badge
+                      variant="secondary"
+                      className=" absolute top-8 left-8"
+                    >
+                      {noticia.category}
+                    </Badge>
+                  </Link>
                 </div>
                 <div className="flex justify-center items-center space-x-2 bg-orange-bg text-white px-4 py-2 rounded-full mx-auto w-fit -top-9 relative">
                   <CalendarDaysIcon className="h-5 w-5" />
                   <span className="text-sm">{noticia.date}</span>
                 </div>
-                <CardContent className="space-y-4 p-4">
-                  <h3 className="text-xl font-semibold xl:truncate">
+                <CardContent className="space-y-4 p-4 pt-0">
+                  <h3 className="text-xl text-center font-semibold xl:truncate">
                     {noticia.title}
                   </h3>
                   <p className="block">
