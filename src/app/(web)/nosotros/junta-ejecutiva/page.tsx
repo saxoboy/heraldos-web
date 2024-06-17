@@ -1,12 +1,21 @@
+import Link from "next/link";
 import Image from "next/image";
+import { Award, Flag, Mail, MapPinned, Phone } from "lucide-react";
 import TitleHeader from "@/components/title-header";
-import { Award, Flag } from "lucide-react";
 import BgGray from "@/components/ui/bg-gray";
 import Title from "@/components/title";
-import Link from "next/link";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { personalList } from "@/data/personal";
 
 const JuntaEjecutivaPage = () => {
+  const personal = personalList;
   return (
     <>
       <section className="-top-[50px] relative mb-8">
@@ -21,9 +30,6 @@ const JuntaEjecutivaPage = () => {
           <h1 className="hidden sm:block text-4xl md:text-5xl font-bold sm:py-4 text-center text-white">
             <TitleHeader txtTitle="Ejecutiva" txtSubtitle="Junta Ejecutiva" />
           </h1>
-          {/* <div className="h-96">
-            <h1 className="text-7xl text-center">Seccion en Construccion </h1>
-          </div> */}
         </div>
         <div className="container flex flex-col lg:flex-row space-y-4 lg:space-x-8 lg:space-y-0">
           <div className="w-full lg:w-1/2">
@@ -119,123 +125,59 @@ const JuntaEjecutivaPage = () => {
             Asociación de Caballeros Heraldos de Cristo C.L.A.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-8 text-blue-txt">
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Mauricio-Stewart.jpeg"
-                alt="Mauricio Stewart"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">Mauricio Stewart</h3>
-              <p className="text-sm mb-0">Presidente Internacional</p>
-            </Card>
-
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Jose-Mangual.jpeg"
-                alt="José E. Mangual"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">José E. Mangual</h3>
-              <p className="text-sm mb-0">Vice-Presidente Internacional</p>
-            </Card>
-
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Vidal-E-Diaz.jpeg"
-                alt="Vidal E. Diaz"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">Vidal E. Diaz</h3>
-              <p className="text-sm mb-0">Secretario General</p>
-            </Card>
-
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Otoniel-Burgos.jpeg"
-                alt="Otoniel Burgos"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">Otoniel Burgos</h3>
-              <p className="text-sm mb-0">Sub-Secretario General</p>
-            </Card>
-
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Herbeth-Mackenzie.jpeg"
-                alt="Herbeth Mackenzie"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">Herbeth Mackenzie</h3>
-              <p className="text-sm mb-0">Tesorero General</p>
-            </Card>
-
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Mario-Castillo.jpeg"
-                alt="Mario D. Castillo"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">Mario D. Castillo</h3>
-              <p className="text-sm mb-0">Sub-Secretario General</p>
-            </Card>
-
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Angel-Martinez.jpeg"
-                alt="Angel R. Martinez"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">Angel R. Martinez</h3>
-              <p className="text-sm mb-0">Vocal 1</p>
-            </Card>
-
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Javier-Fontanez.jpeg"
-                alt="Javier Fontanez"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">Javier Fontanez</h3>
-              <p className="text-sm mb-0">Vocal 2</p>
-            </Card>
-
-            <Card className="p-4">
-              <Image
-                src="/images/nosotros/Juan-Gregorio.jpeg"
-                alt="Juan C. Gregorio"
-                width={420}
-                height={310}
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-              <h3 className="mt-4 text-xl font-semibold">Juan C. Gregorio</h3>
-              <p className="text-sm mb-0">Vocal 3</p>
-            </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-blue-txt">
+            {personal.map((person) => (
+              <Card key={person.id} className="p-4">
+                <Image
+                  src={`/images/nosotros/${person.image}`}
+                  alt={person.name}
+                  width={420}
+                  height={310}
+                  className="w-auto h-auto mx-auto rounded-lg"
+                  loading="lazy"
+                />
+                <h3 className="mt-4 text-xl text-center font-semibold">{person.name}</h3>
+                <p className="text-sm text-center">{person.position}</p>
+                <div className="flex justify-evenly items-center">
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button variant="link" className="p-3 text-orange-bg">
+                          <MapPinned className="w-6 h-6" />
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p className="mb-0">{person.address}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button variant="link" className="p-3 text-orange-bg">
+                          <Phone className="w-6 h-6" />
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p className="mb-0">
+                          <Link href={`tel:${person.phone}`}>
+                            {person.phone}
+                          </Link>
+                        </p>
+                      </TooltipContent>
+                    </Tooltip>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button variant="link" className="p-3 text-orange-bg">
+                          <Mail className="w-6 h-6" />
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p className="mb-0">{person.email}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
