@@ -58,7 +58,7 @@ export const personalList: PersonalItem[] = [
     id: "6",
     name: "Mario D. Castillo",
     image: "Mario-Castillo.jpg",
-    position: "Sub-Secretario General",
+    position: "Sub Tesorero",
     address: "158 Greenwood Rd.Morganville, NJ. 07751",
     phone: "(201) 556-7999",
     email: "marioylenice@gmail.com",

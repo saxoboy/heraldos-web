@@ -30,7 +30,7 @@ export const vicepresidentesList: VicepresidentesItem[] = [
   {
     id: "3",
     name: "Johnny Pizarro",
-    image: "Manuel-Trochez-Vp-Condado Brooklyn.jpg",
+    image: "Johnny-Pizarro-Vp-Condado-connecticut.jpg",
     position: "Vicepresidente Condado Connecticut",
     address: "286 Crown St. Apt. 1 Meriden, CT. 06450",
     phone: "(203) 935-5280",
@@ -102,7 +102,7 @@ export const vicepresidentesList: VicepresidentesItem[] = [
   {
     id: "11",
     name: "Hector R. Escobar",
-    image: "Hector-Torres-Condado Pennsylvania.jpg",
+    image: "Hector-Escobar-Condado-Washington.jpg",
     position: "Condado Washington",
     address: "1536 Northgate Sq. Apt. 2 Reston, VA. 20190",
     phone: "(202) 740-4941",

@@ -45,7 +45,7 @@ const EventosPage = () => {
               <h2 className="text-xl font-semibold text-center py-4 text-blue-title">
                 {event.title}
               </h2>
-              <p className="text-center">{event.content}</p>
+              <p className="text-center truncate">{event.content}</p>
             </Card>
           ))}
         </div>

@@ -101,10 +101,10 @@ export const eventsList: EventItem[] = [
       "/images/events/ce653795-da8a-4465-9c55-674863da2ced.jpeg",
       "/images/events/e24cb8a9-4309-40ec-82d2-ff4a73d0e23a.jpeg",
     ],
-    place: "Centro de Convenciones",
-    category: "Congresos",
-    date: "25 Julio 2024",
+    place: "",
+    category: "Campamento",
+    date: "29 y 30 de julio del 2023",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "Con relación a los que fue nuestro primer campamento en la República Dominicana de  la Asociación de caballeros Heraldos De Cristo, los días 29 y 30 de julio del 2023,  para nosotros los caballeros fue una experiencia inolvidable, una experiencia gratificante ya que fue el primer campamento que pudimos celebrar en el país. Y para ser el primero tuvimos una asistencia aceptable, de 92 caballeros, de manera que para nosotros el campamento fue un éxito  bajo el tema Llenos del Espíritu.  Allá en cada una de las actividades vimos cómo el Señor se glorifica, como el Espíritu Santo nos lleno, se movió en nuestras vidas,  de manera que todos los caballeros en un 90 y tanto por ciento quedaron satisfecho e iluminado y emocionado para  un próximo campamento,  ya que se desbordaron dandoloregtacias a Dios y agradeciéndoles también por dicha actividad.  Todo fue un éxito,  hubieron dificultades cuando llegamos allá,  pero gracias a Dios todo eso se pudo superar,  de manera que los caballeros quedaron con el entusiasmo de volver a participar de otro campamento. Gracias a usted por acompañarnos en dicho  campamento: Mario Castillo y Juan Carlos Gregorio.",
   },
 ];
