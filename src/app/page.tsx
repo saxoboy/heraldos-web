@@ -23,6 +23,7 @@ import LogoJovenes from "~/images/icon-asociacion-jovenes.png";
 import LogoDamas from "~/images/icon-damas.png";
 
 import "./embla.css";
+import { eventsList } from "@/data/events";
 
 export interface GaleryType {
   id: number;
@@ -72,6 +73,7 @@ const SLIDES: GaleryType[] = [
 ];
 
 export default function Home() {
+  const eventos = eventsList.slice(0, 3);
   return (
     <>
       <VideoHero />
@@ -178,86 +180,36 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
-            <Card className="w-[350px] transition-all hover:shadow-xl">
-              <Image
-                src="/images/events/evento-1.jpeg"
-                alt="Campamento de líderes ACHC"
-                width={306}
-                height={200}
-                className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
-                loading="lazy"
-              />
-              <div className="text-white py-2 px-4 rounded-full bg-orange-bg flex justify-center space-x-2 items-center w-fit mx-auto -mt-9 z-50 relative">
-                <Calendar className="text-sm" />{" "}
-                <span className="block text-sm">21 Junio 2024</span>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-blue-title dark:text-gray-txt leading-8 text-center">
-                  Campamento de líderes ACHC
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex justify-center">
-                <Button className="mt-4" variant="outline" size="icon">
-                  <Link href="/eventos">
-                    <MoveRight />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="w-[350px] transition-all hover:shadow-xl">
-              <Image
-                src="/images/events/evento-1.jpeg"
-                alt="Campamento de líderes ACHC"
-                width={306}
-                height={200}
-                className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
-                loading="lazy"
-              />
-              <div className="text-white py-2 px-4 rounded-full bg-orange-bg flex justify-center space-x-2 items-center w-fit mx-auto -mt-9 z-50 relative">
-                <Calendar className="text-sm" />{" "}
-                <span className="block text-sm">21 Junio 2024</span>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-blue-title dark:text-gray-txt leading-8 text-center">
-                  Campamento de líderes ACHC
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex justify-center">
-                <Button className="mt-4" variant="outline" size="icon">
-                  <Link href="/eventos">
-                    <MoveRight />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="w-[350px] transition-all hover:shadow-xl">
-              <Image
-                src="/images/events/evento-1.jpeg"
-                alt="Campamento de líderes ACHC"
-                width={306}
-                height={200}
-                className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
-                loading="lazy"
-              />
-              <div className="text-white py-2 px-4 rounded-full bg-orange-bg flex justify-center space-x-2 items-center w-fit mx-auto -mt-9 z-50 relative">
-                <Calendar className="text-sm" />{" "}
-                <span className="block text-sm">21 Junio 2024</span>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-blue-title dark:text-gray-txt leading-8 text-center">
-                  Campamento de líderes ACHC
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex justify-center">
-                <Button className="mt-4" variant="outline" size="icon">
-                  <Link href="/eventos">
-                    <MoveRight />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
+            {eventos.map((event) => (
+              <article key={event.id}>
+                <Card className="w-[350px] transition-all hover:shadow-xl">
+                  <Image
+                    src={event.photos[0]}
+                    alt={event.title}
+                    width={306}
+                    height={200}
+                    className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
+                    loading="lazy"
+                  />
+                  <div className="text-white py-2 px-4 rounded-full bg-orange-bg flex justify-center space-x-2 items-center w-fit mx-auto -mt-9 z-50 relative">
+                    <Calendar className="text-sm" />{" "}
+                    <span className="block text-sm">{event.date}</span>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-blue-title dark:text-gray-txt leading-8 text-center">
+                      {event.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex justify-center">
+                    <Button className="mt-4" variant="outline" size="icon">
+                      <Link href={`/eventos/${event.slug}`}>
+                        <MoveRight />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </article>
+            ))}           
           </div>
 
           <div className="flex justify-center mb-8">
