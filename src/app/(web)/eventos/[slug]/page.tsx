@@ -38,7 +38,10 @@ const EventsPage: FC<EventsPageProps> = ({ params }) => {
       />
       <div className="container flex flex-col lg:flex-row mt-12 gap-8 mb-12">
         <div className="w-full lg:w-1/5 lg:text-right">
-          <p>{event.content}</p>
+          <div
+            className="mb-4 text-description"
+            dangerouslySetInnerHTML={{ __html: event?.content || "" }}
+          />
           <Separator />
           <h3 className="text-blue-title">Lugar:</h3>
           <p>{event.place}</p>

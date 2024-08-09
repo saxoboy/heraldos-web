@@ -68,7 +68,10 @@ const NoticiaPage: FC<NoticiaPageProps> = ({ params }) => {
             height={440}
             className="rounded-lg float-right ml-8"
           />
-          <p>{noticia.content}</p>
+          <div
+            className="mb-4 text-description"
+            dangerouslySetInnerHTML={{ __html: noticia?.content || "" }}
+          />
         </div>
       </div>
     </>
