@@ -1,6 +1,6 @@
 "use client";
 
-import { z } from "zod";
+import { set, z } from "zod";
 import Link from "next/link";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -13,21 +13,31 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useState } from "react";
 
 const formSchema = z.object({
-  nombre: z.string().min(2).max(50),
-  correo: z.string().email(),
-  telefono: z.string().min(10).max(10),
-  mensaje: z.string().min(10).max(500),
+  nombre: z
+    .string()
+    .min(2, { message: "El nombre debe tener al menos 2 caracteres" })
+    .max(50, { message: "El nombre no puede tener más de 50 caracteres" }),
+  correo: z
+    .string()
+    .email({ message: "Debe ser un correo electrónico válido" }),
+  telefono: z.string(),
+  mensaje: z
+    .string()
+    .min(10, { message: "El mensaje debe tener al menos 10 caracteres" }),
 });
 
 const ContactosPage = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -38,8 +48,33 @@ const ContactosPage = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        console.log("Correo enviado con éxito!");
+        setMessage("Correo enviado con éxito!");
+      } else {
+        console.error("Error al enviar el correo");
+        setMessage(
+          "Hubo un error al enviar el correo, por favor intenta de nuevo"
+        );
+      }
+    } catch (error) {
+      console.error("Hubo un error en la conexión:", error);
+      setMessage("Hubo un error en la conexión, por favor intenta de nuevo");
+    } finally {
+      setIsLoading(false);
+      form.reset();
+    }
   }
 
   return (
@@ -56,7 +91,7 @@ const ContactosPage = () => {
         </div>
       </section>
       <section className="relative">
-        <div className="container flex flex-col lg:flex-row justify-start items-start gap-4 mb-12">
+        <div className="container flex flex-col lg:flex-row justify-start items-start gap-8 mb-12">
           <div className="w-full lg:w-1/2">
             <h1 className="hidden sm:block text-4xl md:text-5xl font-bold sm:py-4 text-center text-white">
               <TitleHeader txtTitle="Contactos" txtSubtitle="Contactos" />
@@ -90,8 +125,8 @@ const ContactosPage = () => {
                 <Mail />
               </div>
               <p>
-                <Link href="mailto:info@heraldoscristo.com">
-                  info@heraldoscristo.com
+                <Link href="mailto:info@heraldoscla.com">
+                  info@heraldoscla.com
                 </Link>
               </p>
             </div>
@@ -110,7 +145,7 @@ const ContactosPage = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 lg:py-32">
+          <div className="w-full lg:w-1/2 lg:pt-48">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
@@ -186,6 +221,18 @@ const ContactosPage = () => {
                 </Button>
               </form>
             </Form>
+            {isLoading && <p>Enviando...</p>}
+            {message && (
+              <div
+                className={`${
+                  message === "Correo enviado con éxito!"
+                    ? "bg-green-100 text-green-700"
+                    : "bg-red-100 text-red-700"
+                } p-4 rounded-md mb-4`}
+              >
+                {message}
+              </div>
+            )}
           </div>
         </div>
       </section>
