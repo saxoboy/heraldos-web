@@ -63,4 +63,13 @@ export const presidenteList: PresidenteForaneoItem[] = [
     phone: "",
     email: "",
   },
+  {
+    id: "7",
+    name: "Herber Fuentes",
+    image: "Herber-Fuentes.jpg",
+    position: "Presidente Nacional de El Salvador",
+    address: "",
+    phone: "50378936246",
+    email: "herberfuentes01@gmail.com",
+  },
 ];
