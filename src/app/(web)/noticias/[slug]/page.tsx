@@ -6,6 +6,7 @@ import TitleHeader from "@/components/title-header";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { NoticiasItem, noticiasList } from "@/data/noticias";
+import GalleryPhotos from "../../multimedia/_components/gallery";
 
 interface NoticiaPageProps {
   params: {
@@ -61,17 +62,16 @@ const NoticiaPage: FC<NoticiaPageProps> = ({ params }) => {
           </div>
         </div>
         <div className="w-full lg:w-4/5">
-          <Image
-            src={noticia.image}
-            alt={noticia.title}
-            width={440}
-            height={440}
-            className="rounded-lg float-right ml-8"
-          />
+          <GalleryPhotos title={noticia.title} photos={noticia.photos} />
           <div
-            className="mb-4 text-description"
+            className="my-8 text-description"
             dangerouslySetInnerHTML={{ __html: noticia?.content || "" }}
           />
+          <div className="w-full my-8 flex justify-center">
+            <Button variant="secondary" asChild>
+              <Link href="/noticias">Volver a Noticias</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </>

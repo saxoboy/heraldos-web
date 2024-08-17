@@ -24,6 +24,7 @@ import LogoDamas from "~/images/icon-damas.png";
 
 import "./embla.css";
 import { eventsList } from "@/data/events";
+import { noticiasList } from "@/data/noticias";
 
 export interface GaleryType {
   id: number;
@@ -74,6 +75,8 @@ const SLIDES: GaleryType[] = [
 
 export default function Home() {
   const eventos = eventsList.slice(0, 3);
+  const noticiaDestacada = noticiasList[0];
+  const noticias = noticiasList.slice(1, 4);
   return (
     <>
       <VideoHero />
@@ -209,7 +212,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </article>
-            ))}           
+            ))}
           </div>
 
           <div className="flex justify-center mb-8">
@@ -262,8 +265,8 @@ export default function Home() {
             <Card className="w-full transition-all hover:shadow-xl">
               <div className="relative p-4">
                 <Image
-                  src="/images/events/evento-1.jpeg"
-                  alt="Campamento de líderes ACHC"
+                  src={noticiaDestacada.photos[0]}
+                  alt={noticiaDestacada.title}
                   width={800}
                   height={600}
                   className="w-full h-auto mx-auto rounded-xl z-0"
@@ -272,19 +275,18 @@ export default function Home() {
               </div>
               <CardContent className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <Badge variant="secondary">Congresos</Badge>
+                  <Badge variant="secondary">{noticiaDestacada.category}</Badge>
                   <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
                     <CalendarDaysIcon className="h-5 w-5" />
-                    <span className="text-sm">25 Julio 2024</span>
+                    <span className="text-sm">{noticiaDestacada.date}</span>
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold">
-                  ¿Cómo mejorar mi relación con Dios día a día?
+                  {noticiaDestacada.title}
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua...
+                  {noticiaDestacada.content.length > 100 &&
+                    noticiaDestacada.content.substring(0, 100) + "..."}
                 </p>
                 <Button variant="ghost" className="justify-self-end">
                   <ArrowRightIcon className="h-5 w-5" />
@@ -292,14 +294,69 @@ export default function Home() {
               </CardContent>
             </Card>
             <div className="grid grid-cols-1 gap-4">
-              <Card className="w-full transition-all hover:shadow-xl">
+              {noticias.map((noticia) => (
+                <Card
+                  key={noticia.id}
+                  className="w-full transition-all hover:shadow-xl"
+                >
+                  <div className="flex flex-col lg:flex-row">
+                    <div className="w-full lg:w-2/5 relative p-4">
+                      <Image
+                        src={noticia.photos[0]}
+                        alt={noticia.title}
+                        width={350}
+                        height={350}
+                        className="w-full h-auto mx-auto rounded-xl z-0"
+                        loading="lazy"
+                      />
+                      <Badge
+                        variant="secondary"
+                        className=" absolute top-8 left-8"
+                      >
+                        {noticia.category}
+                      </Badge>
+                    </div>
+                    <div className="w-full lg:w-3/5">
+                      <CardContent className="space-y-4 p-4">
+                        <div className="flex justify-between items-center">
+                          <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
+                            <CalendarDaysIcon className="h-5 w-5" />
+                            <span className="text-sm">{noticia.date}</span>
+                          </div>
+                          <div>
+                            <Button
+                              variant="outline"
+                              className="justify-self-end"
+                              size="icon"
+                            >
+                              <Link href={`/noticias/${noticia.slug}`}>
+                                <ArrowRightIcon className="h-5 w-5" />
+                              </Link>
+                            </Button>
+                          </div>
+                        </div>
+
+                        <h3 className="text-xl font-semibold xl:truncate">
+                          {noticia.title}
+                        </h3>
+                        <p className="block lg:hidden xl:block">
+                          {noticia.content.length > 100 &&
+                            noticia.content.substring(0, 100) + "..."}
+                        </p>
+                      </CardContent>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+
+              {/* <Card className="w-full transition-all hover:shadow-xl">
                 <div className="flex flex-col lg:flex-row">
                   <div className="w-full lg:w-2/5 relative p-4">
                     <Image
                       src="/images/events/evento-1.jpeg"
                       alt="Campamento de líderes ACHC"
-                      width={350}
-                      height={350}
+                      width={280}
+                      height={180}
                       className="w-full h-auto mx-auto rounded-xl z-0"
                       loading="lazy"
                     />
@@ -392,58 +449,7 @@ export default function Home() {
                     </CardContent>
                   </div>
                 </div>
-              </Card>
-
-              <Card className="w-full transition-all hover:shadow-xl">
-                <div className="flex flex-col lg:flex-row">
-                  <div className="w-full lg:w-2/5 relative p-4">
-                    <Image
-                      src="/images/events/evento-1.jpeg"
-                      alt="Campamento de líderes ACHC"
-                      width={280}
-                      height={180}
-                      className="w-full h-auto mx-auto rounded-xl z-0"
-                      loading="lazy"
-                    />
-                    <Badge
-                      variant="secondary"
-                      className=" absolute top-8 left-8"
-                    >
-                      Congresos
-                    </Badge>
-                  </div>
-                  <div className="w-full lg:w-3/5">
-                    <CardContent className="space-y-4 p-4">
-                      <div className="flex justify-between items-center">
-                        <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
-                          <CalendarDaysIcon className="h-5 w-5" />
-                          <span className="text-sm">25 Julio 2024</span>
-                        </div>
-                        <div>
-                          <Button
-                            variant="outline"
-                            className="justify-self-end"
-                            size="icon"
-                          >
-                            <Link href="/noticias">
-                              <ArrowRightIcon className="h-5 w-5" />
-                            </Link>
-                          </Button>
-                        </div>
-                      </div>
-
-                      <h3 className="text-xl font-semibold xl:truncate">
-                        ¿Cómo mejorar mi relación con Dios día a día?
-                      </h3>
-                      <p className="block lg:hidden xl:block">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua...
-                      </p>
-                    </CardContent>
-                  </div>
-                </div>
-              </Card>
+              </Card> */}
             </div>
           </div>
 

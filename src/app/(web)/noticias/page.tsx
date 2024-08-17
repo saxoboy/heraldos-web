@@ -36,7 +36,7 @@ const NoticiasPage = () => {
                 <div className="w-full relative p-4">
                   <Link href={`/noticias/${noticia.slug}`}>
                     <Image
-                      src={noticia.image}
+                      src={noticia.photos[0]}
                       alt={noticia.title}
                       width={350}
                       height={350}

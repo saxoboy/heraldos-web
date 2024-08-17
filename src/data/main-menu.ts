@@ -27,11 +27,7 @@ export const mainMenu: NavItem[] = [
         link: "/nosotros/presidentes-paises-foraneos",
       },
     ],
-  },
-  {
-    label: "Multimedia",
-    link: "/multimedia",
-  },
+  },  
   {
     label: "Eventos",
     link: "/eventos",
