@@ -49,10 +49,10 @@ export const presidenteList: PresidenteForaneoItem[] = [
     id: "5",
     name: "Felix Alexander Medinas Montoya",
     image: "Felix-Alexander-Medinas-Montoya.jpg",
-    position: "",
+    position: "Presidente ACHC Venezuela",
     address: "",
     phone: "+0412 9843071",
-    email: "",
+    email: "medinasmontoya1974@gmail.com",
   },
   {
     id: "6",
