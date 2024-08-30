@@ -169,85 +169,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#F7F9FA] relative my-12">
-        <ShapeTop />
-        <div className="container mx-auto py-12">
-          <TitleHeader
-            txtTitle="Eventos"
-            txtSubtitle="Conoce más de nuestros"
-            txtSubtitleTwo="próximos eventos"
-          />
-          <p className="text-center">
-            Entérate de nuestros próximos eventos y toda la información
-            relacionada a ellos
-          </p>
-
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
-            {eventos.map((event) => (
-              <article key={event.id}>
-                <Card className="w-[350px] transition-all hover:shadow-xl">
-                  <Image
-                    src={event.photos[0]}
-                    alt={event.title}
-                    width={306}
-                    height={200}
-                    className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
-                    loading="lazy"
-                  />
-                  <div className="text-white py-2 px-4 rounded-full bg-orange-bg flex justify-center space-x-2 items-center w-fit mx-auto -mt-9 z-50 relative">
-                    <Calendar className="text-sm" />{" "}
-                    <span className="block text-sm">{event.date}</span>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-blue-title dark:text-gray-txt leading-8 text-center">
-                      {event.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex justify-center">
-                    <Button className="mt-4" variant="outline" size="icon">
-                      <Link href={`/eventos/${event.slug}`}>
-                        <MoveRight />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </article>
-            ))}
-          </div>
-
-          <div className="flex justify-center mb-8">
-            <Button className="mt-4" variant="outline">
-              <Link href="/eventos">Ver todos los eventos</Link>
-            </Button>
-          </div>
-        </div>
-        <ShapeBottom />
-      </section>
-
-      <section className="relative my-12">
-        <div className="container flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
-          <div className="w-full lg:w-2/5">
-            <Title txtTitle="Galería" txtSubtitle="Multimedia" />
-            <h3 className="text-3xl font-bold text-blue-title dark:text-gray-txt mb-4">
-              Galería <span className="text-orange-bg">audiovisual</span>
-            </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua
-            </p>
-            <Button
-              className="mt-4 mx-auto block lg:inline-block"
-              variant="outline"
-            >
-              <Link href="/galeria">Ir a multimedia</Link>
-            </Button>
-          </div>
-          <div className="w-full lg:w-3/5">
-            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-          </div>
-        </div>
-      </section>
-
       <section className="bg-[#F7F9FA] relative mt-12">
         <ShapeTop />
         <div className="container mx-auto pt-28 pb-0">
@@ -461,6 +382,85 @@ export default function Home() {
         </div>
         {/* <ShapeBottom /> */}
       </section>
+
+      <section className="bg-[#F7F9FA] relative my-12">
+        <ShapeTop />
+        <div className="container mx-auto py-12">
+          <TitleHeader
+            txtTitle="Eventos"
+            txtSubtitle="Conoce más de nuestros"
+            txtSubtitleTwo="próximos eventos"
+          />
+          <p className="text-center">
+            Entérate de nuestros próximos eventos y toda la información
+            relacionada a ellos
+          </p>
+
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
+            {eventos.map((event) => (
+              <article key={event.id}>
+                <Card className="w-[350px] transition-all hover:shadow-xl">
+                  <Image
+                    src={event.photos[0]}
+                    alt={event.title}
+                    width={306}
+                    height={200}
+                    className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
+                    loading="lazy"
+                  />
+                  <div className="text-white py-2 px-4 rounded-full bg-orange-bg flex justify-center space-x-2 items-center w-fit mx-auto -mt-9 z-50 relative">
+                    <Calendar className="text-sm" />{" "}
+                    <span className="block text-sm">{event.date}</span>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-blue-title dark:text-gray-txt leading-8 text-center">
+                      {event.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex justify-center">
+                    <Button className="mt-4" variant="outline" size="icon">
+                      <Link href={`/eventos/${event.slug}`}>
+                        <MoveRight />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </article>
+            ))}
+          </div>
+
+          <div className="flex justify-center mb-8">
+            <Button className="mt-4" variant="outline">
+              <Link href="/eventos">Ver todos los eventos</Link>
+            </Button>
+          </div>
+        </div>
+        <ShapeBottom />
+      </section>
+
+      {/* <section className="relative my-12">
+        <div className="container flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+          <div className="w-full lg:w-2/5">
+            <Title txtTitle="Galería" txtSubtitle="Multimedia" />
+            <h3 className="text-3xl font-bold text-blue-title dark:text-gray-txt mb-4">
+              Galería <span className="text-orange-bg">audiovisual</span>
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+            <Button
+              className="mt-4 mx-auto block lg:inline-block"
+              variant="outline"
+            >
+              <Link href="/galeria">Ir a multimedia</Link>
+            </Button>
+          </div>
+          <div className="w-full lg:w-3/5">
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          </div>
+        </div>
+      </section> */}
 
       <section className="relative bg-orange-bg">
         <ShapeTopOrange />
