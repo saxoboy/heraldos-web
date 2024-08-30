@@ -37,6 +37,10 @@ export const mainMenu: NavItem[] = [
     link: "/noticias",
   },
   {
+    label: "Tienda",
+    link: "/tienda",
+  },
+  {
     label: "Documentos",
     link: "/documentos",
     children: [
