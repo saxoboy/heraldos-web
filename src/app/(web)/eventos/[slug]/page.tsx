@@ -33,7 +33,7 @@ const EventsPage: FC<EventsPageProps> = ({ params }) => {
   return (
     <>
       <TitleHeader
-        txtTitle={`${event?.category}`}
+        txtTitle="eventos"
         txtSubtitle={`${event?.title}`}
       />
       <div className="container flex flex-col lg:flex-row mt-12 gap-8 mb-12">
@@ -48,10 +48,7 @@ const EventsPage: FC<EventsPageProps> = ({ params }) => {
           <Separator />
           <h3 className="text-blue-title">Fecha:</h3>
           <p>{event.date}</p>
-          <Separator />
-          <h3 className="text-blue-title">Categoria:</h3>
-          <p>{event.category}</p>
-          <Separator />
+          <Separator />          
           <h3 className="mb-2">Compartir:</h3>
           <div className="flex gap-4 justify-end">
             <ShareLink
@@ -67,7 +64,7 @@ const EventsPage: FC<EventsPageProps> = ({ params }) => {
           </div>
         </div>
         <div className="w-full lg:w-4/5">
-          <GalleryPhotos title={event.title} photos={event.photos} />
+          <GalleryPhotos title={event.title || "Título no disponible"} photos={event.photos || []} />
         </div>
       </div>
     </>

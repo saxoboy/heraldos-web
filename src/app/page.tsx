@@ -401,8 +401,8 @@ export default function Home() {
               <article key={event.id}>
                 <Card className="w-[350px] transition-all hover:shadow-xl">
                   <Image
-                    src={event.photos[0]}
-                    alt={event.title}
+                    src={event.photos?.[0] || '/images/default-image.png'}
+                    alt={event.title || "Evento sin título"}
                     width={306}
                     height={200}
                     className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
