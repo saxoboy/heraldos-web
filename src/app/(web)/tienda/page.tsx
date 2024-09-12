@@ -7,38 +7,38 @@ import { Button } from "@/components/ui/button";
 const products = [
   {
     id: 1,
-    name: "Classic Tie",
+    name: "Camiseta Cuello",
     price: 29.99,
     available: 50,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "camiseta-cuello.jpeg",
   },
   {
     id: 2,
-    name: "Ceramic Mug",
+    name: "Camiseta Negra",
     price: 12.99,
     available: 100,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "camiseta-negra.jpeg",
   },
   {
     id: 3,
-    name: "Ballpoint Pen",
+    name: "Taza Café",
     price: 3.99,
     available: 200,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "taza.jpeg",
   },
   {
     id: 4,
-    name: "Enamel Pin",
+    name: "Buzo Blanco",
     price: 7.99,
     available: 75,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "buzo-blanco.jpeg",
   },
   {
     id: 5,
-    name: "Polo Shirt",
+    name: "Gorra Blanca",
     price: 24.99,
     available: 60,
-    image: "/placeholder.svg?height=200&width=200",
+    image: "gorra.jpeg",
   },
 ];
 
@@ -71,7 +71,7 @@ const TiendaPage = () => {
                       alt={product.name}
                       className="w-full h-48 object-cover"
                       height="200"
-                      src={product.image}
+                      src={`/images/store/${product.image}`}
                       style={{
                         aspectRatio: "200/200",
                         objectFit: "cover",
