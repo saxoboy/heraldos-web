@@ -2,45 +2,8 @@ import React from "react";
 import Image from "next/image";
 import TitleHeader from "@/components/title-header";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
-const products = [
-  {
-    id: 1,
-    name: "Camiseta Cuello",
-    price: 29.99,
-    available: 50,
-    image: "camiseta-cuello.jpeg",
-  },
-  {
-    id: 2,
-    name: "Camiseta Negra",
-    price: 12.99,
-    available: 100,
-    image: "camiseta-negra.jpeg",
-  },
-  {
-    id: 3,
-    name: "Taza Café",
-    price: 3.99,
-    available: 200,
-    image: "taza.jpeg",
-  },
-  {
-    id: 4,
-    name: "Buzo Blanco",
-    price: 7.99,
-    available: 75,
-    image: "buzo-blanco.jpeg",
-  },
-  {
-    id: 5,
-    name: "Gorra Blanca",
-    price: 24.99,
-    available: 60,
-    image: "gorra.jpeg",
-  },
-];
+import FormTienda from "@/components/form-tienda";
+import { products } from "@/data/productos";
 
 const TiendaPage = () => {
   return (
@@ -62,14 +25,17 @@ const TiendaPage = () => {
 
       <section className="relative flex flex-col lg:flex-row container space-y-4 mb-12">
         <div className="w-full max-w-4xl mx-auto p-4 space-y-6">
-          <div className="grid gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden">
-                <div className="flex flex-col md:flex-row">
-                  <div className="w-full md:w-1/3">
+              <Card
+                key={product.id}
+                className="overflow-hidden hover:shadow-lg transition-all"
+              >
+                <div className="flex flex-col">
+                  <div className="w-full max-h-[200px] max-w-[200px] mx-auto">
                     <Image
                       alt={product.name}
-                      className="w-full h-48 object-cover"
+                      className="w-full object-cover"
                       height="200"
                       src={`/images/store/${product.image}`}
                       style={{
@@ -79,27 +45,17 @@ const TiendaPage = () => {
                       width="200"
                     />
                   </div>
-                  <CardContent className="flex-1 p-6">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h3 className="text-xl font-bold mb-2">
-                          {product.name}
-                        </h3>
-                        <p className="text-gray-600 mb-2">
-                          Precio: ${product.price.toFixed(2)}
-                        </p>
-                        <p className="text-gray-600">
-                          Disponibles: {product.available} unidades
-                        </p>
-                      </div>
-                      <Button className="bg-orange-bg text-white hover:bg-orange-bg/50">
-                        Añadir al carrito
-                      </Button>
-                    </div>
+                  <CardContent className="flex-1 py-6">
+                    <h3 className="text-xl font-bold text-center">
+                      {product.name}
+                    </h3>
                   </CardContent>
                 </div>
               </Card>
             ))}
+          </div>
+          <div className="flex justify-center">
+            <FormTienda />
           </div>
         </div>
       </section>

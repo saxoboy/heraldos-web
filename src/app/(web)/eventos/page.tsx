@@ -27,8 +27,8 @@ const EventosPage = () => {
       </section>
       <section className="relative container">
         <div className="text-center">
-          <h1 className="text-4xl">CONCILIO LATINOAMERICANO</h1>
-          <h2 className="text-2xl">DE LA IGLESIA DE DIOS PENTECOSTAL, INC.</h2>
+          <h1 className="text-4xl">Asociación de Caballeros</h1>
+          <h2 className="text-2xl">Heraldos de Cristo C.L.A.</h2>
           <p>Preconvenciones ACHC 2025</p>
         </div>
         <div className="w-full mx-auto p-4 space-y-6 mb-8 max-w-5xl">
@@ -52,9 +52,9 @@ const EventosPage = () => {
               <Button variant="ghost">Mensual</Button>
             </div>
           </div> */}
-          <div className="grid gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {eventos.map((event) => (
-              <Card key={event.id} className="overflow-hidden">
+              <Card key={event.id} className="overflow-hidden transform hover:shadow-lg">
                 <div className="flex flex-col md:flex-row">
                   {event.photos && (
                     <div className="relative w-full md:w-1/3">
@@ -77,7 +77,7 @@ const EventosPage = () => {
                       />
                     </div>
                   )}
-                  <CardContent className="flex-1 p-6">
+                  <CardContent className="flex-1 p-4">
                     <div className="flex justify-between items-start">
                       <div>
                         {event.date && (
@@ -93,19 +93,19 @@ const EventosPage = () => {
                         )}
 
                         {event.place && (
-                          <p className="text-blue-txt">
+                          <p className="text-blue-txt m-0">
                             <span className="font-semibold">Lugar:</span>{" "}
                             {event.place}
                           </p>
                         )}
                       </div>
-                      <Button
+                      {/* <Button
                         variant="ghost"
                         size="icon"
                         className="text-orange-500"
                       >
                         <ArrowRight className="h-6 w-6" />
-                      </Button>
+                      </Button> */}
                     </div>
                   </CardContent>
                 </div>
