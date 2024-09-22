@@ -8,7 +8,7 @@ const TitleHeader = ({ txtTitle, txtSubtitle, txtSubtitleTwo }: TitleProps) => {
   return (
     <div className="relative w-full">
       <h1
-        className="leading-[162px] font-bold text-9xl text-transparent lowercase text-center"
+        className="leading-[162px] font-bold text-9xl text-transparent lowercase text-center overflow-hidden"
         style={{ WebkitTextStroke: "1px #E5EDFC" }}
       >
         {txtTitle}

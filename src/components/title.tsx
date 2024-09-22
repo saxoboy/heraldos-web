@@ -8,7 +8,7 @@ interface TitleProps {
 const Title = ({ txtTitle, txtSubtitle }: TitleProps) => {
   return (
     <div className="relative w-full">
-      <h1 className="leading-[162px] font-bold text-9xl text-transparent lowercase titleStroke">
+      <h1 className="leading-[162px] font-bold text-9xl text-transparent lowercase titleStroke overflow-hidden">
         {txtTitle}
       </h1>
       <h2
