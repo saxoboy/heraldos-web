@@ -78,12 +78,38 @@ export default function FormTienda() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Order placed:", formData);
-    setIsOpen(false);
-    // Aquí puedes hacer el submit del formulario con los productos y sus tallas
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        console.log("Correo enviado:", result.message);
+        // Cierra el modal si es necesario
+        setIsOpen(false);
+      } else {
+        console.error("Error al enviar el correo:", result.message);
+      }
+    } catch (error) {
+      console.error("Error al enviar el correo:", error);
+    }
   };
+
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   console.log("Order placed:", formData);
+  //   setIsOpen(false);
+  //   // Aquí puedes hacer el submit del formulario con los productos y sus tallas
+  // };
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
