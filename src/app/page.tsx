@@ -2,9 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRightIcon,
-  Calendar,
   CalendarDaysIcon,
-  MoveRight,
 } from "lucide-react";
 import { EmblaOptionsType } from "embla-carousel";
 import VideoHero from "@/components/video-hero";
