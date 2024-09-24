@@ -502,7 +502,7 @@ export default function Home() {
               </h3>
               <p className="text-white mb-0">Corbatas y pings para tí</p>
               <Button className="mt-4" variant="outline">
-                <Link href="/documentos">Hacer Pedidos</Link>
+                <Link href="/tienda">Hacer Pedidos</Link>
               </Button>
             </div>
           </div>
