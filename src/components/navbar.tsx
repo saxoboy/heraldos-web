@@ -96,20 +96,20 @@ const Navbar = () => {
         </ul>
         <div className="hidden lg:flex items-center gap-4 text-gray-txt">
           <Link
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/ACHCCLA"
             target="_blank"
             className="hidden lg:block"
           >
             <RiFacebookCircleFill className="w-8 h-8 hover:scale-110 hover:text-orange-bg" />
           </Link>
-          <Link
+          {/* <Link
             href="https://www.youtube.com"
             target="_blank"
             className="hidden lg:block"
           >
             <RiYoutubeFill className="w-8 h-8 hover:scale-110 hover:text-orange-bg" />
           </Link>
-          <ModeToggle />
+          <ModeToggle /> */}
         </div>
       </nav>
 
