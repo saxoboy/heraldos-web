@@ -2,7 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRightIcon,
+  Calendar,
   CalendarDaysIcon,
+  MoveRight,
 } from "lucide-react";
 import { EmblaOptionsType } from "embla-carousel";
 import VideoHero from "@/components/video-hero";
@@ -377,6 +379,67 @@ export default function Home() {
               <Link href="/noticias">Ver todas las noticias</Link>
             </Button>
           </div>
+        </div>
+        {/* <ShapeBottom /> */}
+      </section>
+
+      <section className="bg-[#F7F9FA] relative">
+        {/* <ShapeTop /> */}
+        <div className="container mx-auto">
+          <TitleHeader
+            txtTitle="Eventos"
+            txtSubtitle="Nuestros"
+            txtSubtitleTwo="próximos eventos"
+          />
+          <p className="text-center">
+            Entérate de nuestros próximos eventos y toda la información
+            relacionada a ellos
+          </p>
+
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
+            {/* {eventos.map((event) => (
+              <article key={event.id}>
+                <Card className="w-[350px] transition-all hover:shadow-xl">
+                  <Image
+                    src={event.photos?.[0] || '/images/default-image.png'}
+                    alt={event.title || "Evento sin título"}
+                    width={306}
+                    height={200}
+                    className="w-auto h-auto mx-auto p-4 rounded-3xl z-0"
+                    loading="lazy"
+                  />
+                  <div className="text-white py-2 px-4 rounded-full bg-orange-bg flex justify-center space-x-2 items-center w-fit mx-auto -mt-9 z-50 relative">
+                    <Calendar className="text-sm" />{" "}
+                    <span className="block text-sm">{event.date}</span>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-blue-title dark:text-gray-txt leading-8 text-center">
+                      {event.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex justify-center">
+                    <Button className="mt-4" variant="outline" size="icon">
+                      <Link href={`/eventos/${event.slug}`}>
+                        <MoveRight />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </article>
+            ))} */}
+            <Image
+              src="/images/events/trimestral-caballeros.jpeg"
+              alt="Trimestral Caballeros"
+              width={500}
+              height={500}
+            />
+          </div>
+
+          {/* <div className="flex justify-center mb-8">
+            <Button className="mt-4" variant="outline">
+              <Link href="/eventos">Ver todos los eventos</Link>
+            </Button>
+          </div> */}
         </div>
         {/* <ShapeBottom /> */}
       </section>
