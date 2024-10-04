@@ -56,8 +56,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body className={`${poppins.variable} ${poppins.className}`}>
           <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
+            attribute="class"            
             enableSystem
             disableTransitionOnChange
           >
