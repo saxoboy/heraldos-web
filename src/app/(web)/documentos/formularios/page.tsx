@@ -8,7 +8,7 @@ const FormulariosPage = () => {
   return (
     <>
       <section className="-top-[50px] relative">
-        <div className="container mx-auto max-w-[768px] lg:max-w-[1024px]">
+        <div className="container mx-auto max-w-[768px] lg:max-w-[1024px] pt-16 lg:pt-0">
           <Image
             src="/images/documentos.png"
             alt=""

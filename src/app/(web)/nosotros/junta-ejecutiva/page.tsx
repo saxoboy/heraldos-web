@@ -19,7 +19,7 @@ const JuntaEjecutivaPage = () => {
   return (
     <>
       <section className="-top-[50px] relative mb-8">
-        <div className="container mx-auto max-w-[768px] lg:max-w-[1024px]">
+        <div className="container mx-auto max-w-[768px] lg:max-w-[1024px] pt-16 lg:pt-0">
           <Image
             src="/images/bible.png"
             alt=""
