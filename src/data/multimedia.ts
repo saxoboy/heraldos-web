@@ -33,8 +33,7 @@ export const multimediaList: MultimediaItem[] = [
     place: "Centro de Convenciones",
     category: "Congresos",
     date: "25 Julio 2024",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+    content:"",
   },
   {
     id: "2",
@@ -49,8 +48,7 @@ export const multimediaList: MultimediaItem[] = [
     place: "Centro de Convenciones",
     category: "Congresos",
     date: "25 Julio 2024",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    content:"",
   },
   {
     id: "3",
@@ -67,8 +65,7 @@ export const multimediaList: MultimediaItem[] = [
     place: "Centro de Convenciones",
     category: "Congresos",
     date: "25 Julio 2024",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    content:"",
   },
   {
     id: "4",
@@ -86,8 +83,7 @@ export const multimediaList: MultimediaItem[] = [
     place: "Centro de Convenciones",
     category: "Congresos",
     date: "25 Julio 2024",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    content:"",
   },
   {
     id: "5",
@@ -104,7 +100,6 @@ export const multimediaList: MultimediaItem[] = [
     place: "Centro de Convenciones",
     category: "Congresos",
     date: "25 Julio 2024",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    content:"",
   },
 ];
