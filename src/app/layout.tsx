@@ -55,18 +55,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="es" suppressHydrationWarning>
         <head />
         <body className={`${poppins.variable} ${poppins.className}`}>
-          <ThemeProvider
-            attribute="class"            
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full z-30">
-              <Navbar />
-            </div>
-            {children}
-            <Footer />
-            <Analytics />
-          </ThemeProvider>
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full z-30">
+            <Navbar />
+          </div>
+          {children}
+          <Footer />
+          <Analytics />
         </body>
       </html>
     </>
