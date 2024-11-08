@@ -46,7 +46,7 @@ export async function POST(request: Request) {
 
   try {
     const result = await sendEmail(
-      "israelherrerae@gmail.com",
+      `${process.env.EMAIL_CONTACT_CLIENT}`,
       "Nuevo pedido desde el formulario de Tienda",
       emailContent
     );
