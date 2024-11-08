@@ -39,6 +39,9 @@ export default function FormTienda() {
     county: "",
     selectedItems: [] as ISelectedProduct[],
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -93,27 +96,35 @@ export default function FormTienda() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
-    // try {
-    //   const response = await fetch("/api/sendEmail", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(formData),
-    //   });
+    setIsSubmitting(true);
+    setSubmitError(null);
+    setSubmitSuccess(null);
 
-    //   const result = await response.json();
+    try {
+      const response = await fetch("/api/quotes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    //   if (response.ok) {
-    //     console.log("Correo enviado:", result.message);
-    //     setIsOpen(false);
-    //   } else {
-    //     console.error("Error al enviar el correo:", result.message);
-    //   }
-    // } catch (error) {
-    //   console.error("Error al enviar el correo:", error);
-    // }
+      if (response.ok) {
+        setSubmitSuccess("¡Orden enviada exitosamente!");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          county: "",
+          selectedItems: [],
+        });
+      } else {
+        const data = await response.json();
+        setSubmitError(data.error || "Hubo un error al enviar la orden.");
+      }
+    } catch (error) {
+      setSubmitError("Hubo un error al enviar la orden.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -196,9 +207,9 @@ export default function FormTienda() {
                     alt={product.name}
                     width={150}
                     height={150}
-                    style={{ 
-                      objectFit: "cover", 
-                      aspectRatio: "1/1"
+                    style={{
+                      objectFit: "cover",
+                      aspectRatio: "1/1",
                     }}
                   />
 
@@ -273,9 +284,14 @@ export default function FormTienda() {
               ))}
             </div>
           </div>
-
-          <Button type="submit" className="w-fit lg:col-span-2 mx-auto">
-            Enviar Orden
+          {submitError && <p className=" text-[red]">{submitError}</p>}
+          {submitSuccess && <p className="text-[green]">{submitSuccess}</p>}
+          <Button
+            type="submit"
+            className="w-fit lg:col-span-2"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Enviando..." : "Enviar"}
           </Button>
         </form>
       </DialogContent>
