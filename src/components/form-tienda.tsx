@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/dialog";
 import { ETalla, IProduct, products } from "@/data/productos";
 import "react-international-phone/style.css";
+import { set } from "zod";
 
 interface ISelectedProduct extends IProduct {
   cantidad: number;
@@ -116,6 +117,9 @@ export default function FormTienda() {
           county: "",
           selectedItems: [],
         });
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 3000);
       } else {
         const data = await response.json();
         setSubmitError(data.error || "Hubo un error al enviar la orden.");
