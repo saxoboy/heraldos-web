@@ -140,7 +140,7 @@ const JuntaEjecutivaPage = () => {
                 <p className="text-sm text-center">{person.position}</p>
                 <div className="flex justify-evenly items-center">
                   <TooltipProvider>
-                    <Tooltip>
+                    {/* <Tooltip>
                       <TooltipTrigger asChild>
                         <Button variant="link" className="p-3 text-orange-bg">
                           <MapPinned className="w-6 h-6" />
@@ -149,7 +149,7 @@ const JuntaEjecutivaPage = () => {
                       <TooltipContent>
                         <p className="mb-0">{person.address}</p>
                       </TooltipContent>
-                    </Tooltip>
+                    </Tooltip> */}
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Button variant="link" className="p-3 text-orange-bg">
