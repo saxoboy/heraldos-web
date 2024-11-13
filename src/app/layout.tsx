@@ -1,11 +1,10 @@
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "@/constant/config";
 import { poppins } from "@/lib/fonts";
-import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import "./globals.css";
 
 interface RootLayoutProps {
   children: React.ReactNode;
