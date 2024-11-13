@@ -51,10 +51,10 @@ const NoticiasPage = () => {
                     </Badge>
                   </Link>
                 </div>
-                <div className="flex justify-center items-center space-x-2 bg-orange-bg text-white px-4 py-2 rounded-full mx-auto w-fit -top-9 relative">
+                {/* <div className="flex justify-center items-center space-x-2 bg-orange-bg text-white px-4 py-2 rounded-full mx-auto w-fit -top-9 relative">
                   <CalendarDaysIcon className="h-5 w-5" />
                   <span className="text-sm">{noticia.date}</span>
-                </div>
+                </div> */}
                 <CardContent className="space-y-4 p-4 pt-0">
                   <h3 className="text-xl text-center font-semibold xl:truncate">
                     {noticia.title}

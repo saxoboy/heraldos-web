@@ -99,7 +99,11 @@ export default function Home() {
             </div>
 
             <div>
-              <Link href="/">
+              <Link
+                href="https://claiddp.org"
+                title="Concilio Latinoamericano Iglesia de Dios Pentecostal"
+                target="_blank"
+              >
                 <Image
                   src={LogoConcilioLatino}
                   alt="Concilio Latinoamericano Iglesia de Dios Pentecostal"
@@ -110,7 +114,11 @@ export default function Home() {
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link
+                href="https://www.ajeccla.com/es"
+                title="Asoaciación de Jóvenes Embajadores de Cristo C.L.A"
+                target="_blank"
+              >
                 <Image
                   src={LogoJovenes}
                   alt="Asoaciación de Jóvenes Embajadores de Cristo C.L.A"
@@ -197,10 +205,10 @@ export default function Home() {
               <CardContent className="space-y-4">
                 <div className="flex justify-between items-center">
                   <Badge variant="secondary">{noticiaDestacada.category}</Badge>
-                  <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
+                  {/* <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
                     <CalendarDaysIcon className="h-5 w-5" />
                     <span className="text-sm">{noticiaDestacada.date}</span>
-                  </div>
+                  </div> */}
                 </div>
                 <h3 className="text-xl font-semibold">
                   {noticiaDestacada.title}
@@ -239,11 +247,11 @@ export default function Home() {
                     </div>
                     <div className="w-full lg:w-3/5">
                       <CardContent className="space-y-4 p-4">
-                        <div className="flex justify-between items-center">
-                          <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
+                        <div className="flex justify-end items-center">
+                          {/* <div className="flex items-center space-x-2 bg-orange-bg w-fit text-white px-4 py-2 rounded-full">
                             <CalendarDaysIcon className="h-5 w-5" />
                             <span className="text-sm">{noticia.date}</span>
-                          </div>
+                          </div> */}
                           <div>
                             <Button
                               variant="outline"
@@ -396,8 +404,8 @@ export default function Home() {
             relacionada a ellos
           </p>
 
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
-            {/* {eventos.map((event) => (
+          {/* <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
+            {eventos.map((event) => (
               <article key={event.id}>
                 <Card className="w-[350px] transition-all hover:shadow-xl">
                   <Image
@@ -426,20 +434,20 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </article>
-            ))} */}
+            ))}
             <Image
               src="/images/events/trimestral-caballeros.jpeg"
               alt="Trimestral Caballeros"
               width={500}
               height={500}
             />
-          </div>
+          </div> */}
 
-          {/* <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <Button className="mt-4" variant="outline">
               <Link href="/eventos">Ver todos los eventos</Link>
             </Button>
-          </div> */}
+          </div>
         </div>
         {/* <ShapeBottom /> */}
       </section>

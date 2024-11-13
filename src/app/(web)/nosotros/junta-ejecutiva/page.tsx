@@ -136,7 +136,9 @@ const JuntaEjecutivaPage = () => {
                   className="w-auto h-auto mx-auto rounded-lg"
                   loading="lazy"
                 />
-                <h3 className="mt-4 text-xl text-center font-semibold">{person.name}</h3>
+                <h3 className="mt-4 text-xl text-center font-semibold">
+                  {person.name}
+                </h3>
                 <p className="text-sm text-center">{person.position}</p>
                 <div className="flex justify-evenly items-center">
                   <TooltipProvider>
@@ -150,30 +152,49 @@ const JuntaEjecutivaPage = () => {
                         <p className="mb-0">{person.address}</p>
                       </TooltipContent>
                     </Tooltip> */}
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Button variant="link" className="p-3 text-orange-bg">
-                          <Phone className="w-6 h-6" />
-                        </Button>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p className="mb-0">
-                          <Link href={`tel:${person.phone}`}>
-                            {person.phone}
-                          </Link>
-                        </p>
-                      </TooltipContent>
-                    </Tooltip>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Button variant="link" className="p-3 text-orange-bg">
-                          <Mail className="w-6 h-6" />
-                        </Button>
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p className="mb-0">{person.email}</p>
-                      </TooltipContent>
-                    </Tooltip>
+                    {person.phone && (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            variant="link"
+                            className="p-3 text-orange-bg"
+                            asChild
+                          >
+                            <Link href={`tel:${person.phone}`}>
+                              <Phone className="w-6 h-6" />
+                            </Link>
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p className="mb-0">
+                            <Link href={`tel:${person.phone}`}>
+                              {person.phone}
+                            </Link>
+                          </p>
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
+
+                    {person.email && (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            asChild
+                            variant="link"
+                            className="p-3 text-orange-bg"
+                          >
+                            <Link
+                              href={`mailto:${person.email}?subject=Contacto%20desde%20la%20página%20web%20de%20Heraldos%20De%20Cristo`}
+                            >
+                              <Mail className="w-6 h-6" />
+                            </Link>
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p className="mb-0">{person.email}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
                   </TooltipProvider>
                 </div>
               </Card>
