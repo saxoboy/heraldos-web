@@ -41,9 +41,9 @@ const NoticiaPage: FC<NoticiaPageProps> = ({ params }) => {
       />
       <div className="container flex flex-col lg:flex-row mt-12 gap-8 mb-12">
         <div className="w-full lg:w-1/5 lg:text-right">
-          <h3 className="text-blue-title">Fecha:</h3>
+          {/* <h3 className="text-blue-title">Fecha:</h3>
           <p>{noticia.date}</p>
-          <Separator />
+          <Separator /> */}
           <h3 className="text-blue-title">Categoria:</h3>
           <p>{noticia.category}</p>
           <Separator />

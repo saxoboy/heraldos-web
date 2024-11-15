@@ -193,14 +193,16 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="w-full transition-all hover:shadow-xl">
               <div className="relative p-4">
-                <Image
-                  src={noticiaDestacada.photos[0]}
-                  alt={noticiaDestacada.title}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto mx-auto rounded-xl z-0"
-                  loading="lazy"
-                />
+                <Link href={`/noticias/${noticiaDestacada.slug}`}>
+                  <Image
+                    src={noticiaDestacada.photos[0]}
+                    alt={noticiaDestacada.title}
+                    width={800}
+                    height={600}
+                    className="w-full h-auto mx-auto rounded-xl z-0"
+                    loading="lazy"
+                  />
+                </Link>
               </div>
               <CardContent className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -210,9 +212,11 @@ export default function Home() {
                     <span className="text-sm">{noticiaDestacada.date}</span>
                   </div> */}
                 </div>
-                <h3 className="text-xl font-semibold">
-                  {noticiaDestacada.title}
-                </h3>
+                <Link href={`/noticias/${noticiaDestacada.slug}`}>
+                  <h3 className="text-xl font-semibold">
+                    {noticiaDestacada.title}
+                  </h3>
+                </Link>
                 <p>
                   {noticiaDestacada.content.length > 100 &&
                     noticiaDestacada.content.substring(0, 100) + "..."}
@@ -230,14 +234,16 @@ export default function Home() {
                 >
                   <div className="flex flex-col lg:flex-row">
                     <div className="w-full lg:w-2/5 relative p-4">
-                      <Image
-                        src={noticia.photos[0]}
-                        alt={noticia.title}
-                        width={350}
-                        height={350}
-                        className="w-full h-auto mx-auto rounded-xl z-0"
-                        loading="lazy"
-                      />
+                      <Link href={`/noticias/${noticia.slug}`}>
+                        <Image
+                          src={noticia.photos[0]}
+                          alt={noticia.title}
+                          width={350}
+                          height={350}
+                          className="w-full h-auto mx-auto rounded-xl z-0"
+                          loading="lazy"
+                        />
+                      </Link>
                       <Badge
                         variant="secondary"
                         className=" absolute top-8 left-8"
@@ -265,9 +271,11 @@ export default function Home() {
                           </div>
                         </div>
 
-                        <h3 className="text-xl font-semibold xl:truncate">
-                          {noticia.title}
-                        </h3>
+                        <Link href={`/noticias/${noticia.slug}`}>
+                          <h3 className="text-xl font-semibold xl:truncate">
+                            {noticia.title}
+                          </h3>
+                        </Link>
                         <p className="block lg:hidden xl:block">
                           {noticia.content.length > 100 &&
                             noticia.content.substring(0, 100) + "..."}

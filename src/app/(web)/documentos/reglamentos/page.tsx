@@ -25,6 +25,21 @@ const ReglamentosPage = () => {
         <section className="relative container space-y-4 mb-12">
           <Card>
             <CardContent className="pt-6 flex justify-between items-center">
+              <h3 className="flex-1">Reglamento - Asociación de Caballeros</h3>
+              <div className="flex-1 text-center">PDF</div>
+              <Button className="w-fit" variant="secondary">
+                <Link
+                  href={"/documentos/Reglamento-Heraldos-de-Cristo.pdf"}
+                  target="_blank"
+                >
+                  Descargar
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="pt-6 flex justify-between items-center">
               <h3 className="flex-1">
                 Forma de Solicitud para Candidatura para la Junta
               </h3>
