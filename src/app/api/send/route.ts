@@ -10,7 +10,7 @@ export async function POST(req: any) {
   try {
     const { data, error } = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
-      to: ["israelherrerae@gmail.com"], // Reemplaza con la dirección de correo de destino
+      to: [`${process.env.EMAIL_CONTACT}`], // Reemplaza con la dirección de correo de destino
       subject: `Nuevo mensaje de contacto de ${nombre}`,
       react: EmailTemplate({
         nombre,
