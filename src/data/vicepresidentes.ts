@@ -108,4 +108,13 @@ export const vicepresidentesList: VicepresidentesItem[] = [
     phone: "(202) 740-4941",
     email: "hectorescobar@yahoo.es",
   },
+  {
+    id: "12",
+    name: "Benjamin Toro",
+    image: "Benjamin-Toro-Vp-Condado-Mass-Sur.jpg",
+    position: "Vp. Condado Mass. Sur",
+    address: "",
+    phone: "(413) 885-4797",
+    email: "benjitoro7575@gmail.com",
+  },
 ];
