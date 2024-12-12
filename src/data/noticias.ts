@@ -1,5 +1,5 @@
 export interface NoticiasItem {
-  id: string;
+  id: number;
   title: string;
   slug: string;
   photos: string[];
@@ -11,7 +11,7 @@ export interface NoticiasItem {
 
 export const noticiasList: NoticiasItem[] = [
   {
-    id: "1",
+    id: 1,
     title: "Pre convenciones 2024",
     slug: "pre-convenciones-2024",
     photos: [
@@ -36,7 +36,7 @@ export const noticiasList: NoticiasItem[] = [
     content: "",
   },
   {
-    id: "2",
+    id: 2,
     title: "Campamento 2023",
     slug: "campamento-2023",
     photos: [
@@ -51,7 +51,7 @@ export const noticiasList: NoticiasItem[] = [
     content: "",
   },
   {
-    id: "3",
+    id: 3,
     title: "Convención Chile",
     slug: "convencion-chile",
     photos: [
@@ -68,7 +68,7 @@ export const noticiasList: NoticiasItem[] = [
     content: "",
   },
   {
-    id: "4",
+    id: 4,
     title: "Convención Internacional 2024",
     slug: "convencion-internacional-2024",
     photos: [
@@ -86,7 +86,7 @@ export const noticiasList: NoticiasItem[] = [
     content: "",
   },
   {
-    id: "5",
+    id: 5,
     title: "Campamento Rep Dominicana",
     slug: "campamento-rep-dominicana",
     photos: [
@@ -100,6 +100,37 @@ export const noticiasList: NoticiasItem[] = [
     place: "Centro de Convenciones",
     category: "Campamento",
     date: "25 Julio 2024",
+    content: "",
+  },
+  {
+    id: 6,
+    title: "Celebración Navideña 2024 - ACHC",
+    slug: "celebracion-navidena-2024-achc",
+    photos: [
+      "/images/noticias/celebracion-navidena-2024-achc-5.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-1.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-2.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-3.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-4.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-6.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-7.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-8.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-9.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-10.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-11.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-12.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-13.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-14.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-15.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-16.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-17.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-18.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-19.jpeg",
+      "/images/noticias/celebracion-navidena-2024-achc-20.jpeg",
+    ],
+    place: "Centro de Convenciones",
+    category: "Celebración",
+    date: "7 Diciembre 2024",
     content: "",
   },
 ];

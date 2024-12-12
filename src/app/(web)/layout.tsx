@@ -8,7 +8,7 @@ interface RootLayoutProps {
 export default function SeccionLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <div className="bg-gradient-to-b from-blue-bg to-[#932616] relative">
+      <div className="bg-gradient-to-b from-blue-bg to-[#932616] relative min-h-56">
         <div className="relative p-0 overflow-hidden">
           <Image
             src="/images/junta-ejecutiva.jpeg"
@@ -19,7 +19,7 @@ export default function SeccionLayout({ children }: RootLayoutProps) {
           />
           <section className="bg-gradient-to-b from-blue-bg from-50% to-[#932616] to-99% w-full h-full absolute left-0 top-0 opacity-75" />
         </div>
-        <div className="absolute z-10 top-2/3 sm:top-1/2 md:top-2/3 xl:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full">
+        <div className="absolute z-10 top-2/3 sm:top-1/2 md:top-[220px] lg:top-[250px] xl:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full">
           <BreadcrumbMain />
         </div>
         <div

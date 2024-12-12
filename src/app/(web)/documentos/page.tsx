@@ -1,6 +1,8 @@
+import Link from "next/link";
 import Image from "next/image";
 import TitleHeader from "@/components/title-header";
-
+import { Button } from "@/components/ui/button";
+import { FileText, FileType } from "lucide-react";
 const DocumentosPage = () => {
   return (
     <>
@@ -13,21 +15,35 @@ const DocumentosPage = () => {
             height={116}
             className="w-auto h-auto mx-auto relative z-10"
           />
-          <h1 className="hidden sm:block text-4xl md:text-5xl font-bold sm:py-4 text-center text-white">
+          <div className="hidden sm:block text-4xl md:text-5xl font-bold sm:py-4 text-center text-white">
             <TitleHeader
               txtTitle="Documentos"
               txtSubtitle="Reglamentos y Formularios"
             />
-          </h1>
+          </div>
         </div>
       </section>
 
-      <section className="relative flex flex-col lg:flex-row container space-y-4 mb-12">
-        <div className="w-full lg:w-1/2 text-center">
-          <h2>Formularios</h2>
+      <section className="relative flex flex-col md:flex-row container space-y-4 mb-12">
+        <div className="w-full lg:w-1/2 text-center flex flex-col justify-center items-center gap-8">
+          <div>
+            <FileType size="100" absoluteStrokeWidth />
+          </div>
+          <Button asChild>
+            <Link href="/documentos/reglamentos">
+              <h2>Reglamentos</h2>
+            </Link>
+          </Button>
         </div>
-        <div className="w-full lg:w-1/2 text-center">
-          <h2>Documentos</h2>
+        <div className="w-full lg:w-1/2 text-center flex flex-col justify-center items-center gap-4">
+          <div>
+            <FileText size="100" absoluteStrokeWidth />
+          </div>
+          <Button asChild variant="secondary">
+            <Link href="/documentos/formularios">
+              <h2>Formularios</h2>
+            </Link>
+          </Button>
         </div>
       </section>
     </>

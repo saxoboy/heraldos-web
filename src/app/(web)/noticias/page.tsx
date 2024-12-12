@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { noticiasList } from "@/data/noticias";
 
 const NoticiasPage = () => {
-  const noticias = noticiasList;
+  const noticias = noticiasList.sort((a, b) => Number(b.id) - Number(a.id));
   return (
     <>
       <section className="-top-[50px] relative">

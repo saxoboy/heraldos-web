@@ -75,8 +75,11 @@ const SLIDES: GaleryType[] = [
 
 export default function Home() {
   const eventos = eventsList.slice(0, 3);
+  const noticias = noticiasList
+    .sort((a, b) => Number(b.id) - Number(a.id))
+    .slice(1, 4);
   const noticiaDestacada = noticiasList[0];
-  const noticias = noticiasList.slice(1, 4);
+
   return (
     <>
       <VideoHero />
@@ -558,7 +561,7 @@ export default function Home() {
               </h3>
               <p className="text-white mb-0">Descarga tus documentos aquí</p>
               <Button className="mt-4" variant="outline">
-                <Link href="/documentos">Descargar documentos</Link>
+                <Link href="/documentos/reglamentos">Descargar documentos</Link>
               </Button>
             </div>
           </div>

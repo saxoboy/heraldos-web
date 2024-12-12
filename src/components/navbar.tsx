@@ -94,7 +94,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="hidden lg:flex items-center gap-4 text-gray-txt">
+        <div className="hidden xl:flex items-center gap-4 text-gray-txt">
           <Link
             href="https://www.facebook.com/ACHCCLA"
             target="_blank"
@@ -160,13 +160,13 @@ function MobileNav({ closeSideMenu }: MobileNavProps) {
           ))}
         </ul>
         <div className="flex justify-center items-center gap-4 py-8">
-          <Link href="https://www.facebook.com" target="_blank">
+          <Link href="https://www.facebook.com/ACHCCLA" target="_blank">
             <RiFacebookCircleFill className="text-3xl text-white" />
           </Link>
-          <Link href="https://www.youtube.com" target="_blank">
+          {/* <Link href="https://www.youtube.com" target="_blank">
             <RiYoutubeFill className="text-3xl text-white" />
           </Link>
-          <ModeToggle />
+          <ModeToggle /> */}
         </div>
       </div>
     </div>
@@ -198,7 +198,7 @@ function SingleNavItem({
   return (
     <>
       <Link ref={animationParent} onClick={closeItem} href={link ?? "#"}>
-        <p className="flex cursor-pointer items-center gap-2 group-hover:text-red-500 mb-0">
+        <p className="flex cursor-pointer items-center gap-2 text-white group-hover:text-orange-bg mb-0">
           <span>{label}</span>
           {children && (
             <IoIosArrowDown
