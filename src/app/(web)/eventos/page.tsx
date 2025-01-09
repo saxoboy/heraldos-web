@@ -54,7 +54,10 @@ const EventosPage = () => {
           </div> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {eventos.map((event) => (
-              <Card key={event.id} className="overflow-hidden transform hover:shadow-lg">
+              <Card
+                key={event.id}
+                className="overflow-hidden transform hover:shadow-lg"
+              >
                 <div className="flex flex-col md:flex-row">
                   {event.photos && (
                     <div className="relative w-full md:w-1/3">
@@ -142,5 +145,4 @@ const EventosPage = () => {
     </>
   );
 };
-
 export default EventosPage;
