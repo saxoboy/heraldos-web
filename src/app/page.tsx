@@ -452,6 +452,8 @@ export default function Home() {
               width={500}
               height={500}
               title="Pre Convención Orando en todo tiempo"
+              className="w-auto h-auto mx-auto rounded-lg"
+              loading="lazy"
             />
           </div>
 
