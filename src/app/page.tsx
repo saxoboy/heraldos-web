@@ -415,8 +415,8 @@ export default function Home() {
             relacionada a ellos
           </p>
 
-          {/* <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
-            {eventos.map((event) => (
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
+            {/* {eventos.map((event) => (
               <article key={event.id}>
                 <Card className="w-[350px] transition-all hover:shadow-xl">
                   <Image
@@ -445,14 +445,15 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </article>
-            ))}
+            ))} */}
             <Image
-              src="/images/events/trimestral-caballeros.jpeg"
-              alt="Trimestral Caballeros"
+              src="/images/events/pre-convencion-orando-en-todo-tiempo.jpeg"
+              alt="Pre Convención Orando en todo tiempo"
               width={500}
               height={500}
+              title="Pre Convención Orando en todo tiempo"
             />
-          </div> */}
+          </div>
 
           <div className="flex justify-center">
             <Button className="mt-4" variant="outline">
