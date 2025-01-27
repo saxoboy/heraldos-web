@@ -446,15 +446,28 @@ export default function Home() {
                 </Card>
               </article>
             ))} */}
-            <Image
-              src="/images/events/pre-convencion-orando-en-todo-tiempo.jpeg"
-              alt="Pre Convención Orando en todo tiempo"
-              width={500}
-              height={500}
-              title="Pre Convención Orando en todo tiempo"
-              className="w-auto h-auto mx-auto rounded-lg"
-              loading="lazy"
-            />
+            <div>
+              <Image
+                src="/images/events/pre-convencion.jpeg"
+                alt="Pre Convención Condado del Bronx"
+                width={500}
+                height={500}
+                title="Pre Convención Condado del Bronx"
+                className="w-auto h-auto mx-auto rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <Image
+                src="/images/events/pre-convencion-orando-en-todo-tiempo.jpeg"
+                alt="Pre Convención Orando en todo tiempo"
+                width={500}
+                height={500}
+                title="Pre Convención Orando en todo tiempo"
+                className="w-auto h-auto mx-auto rounded-lg"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           <div className="flex justify-center">
