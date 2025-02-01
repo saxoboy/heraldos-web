@@ -448,22 +448,33 @@ export default function Home() {
             ))} */}
             <div>
               <Image
-                src="/images/events/pre-convencion.jpeg"
-                alt="Pre Convención Condado del Bronx"
+                src="/images/events/pre-convencion-orando-en-todo-tiempo.jpeg"
+                alt="Pre Convención Orando en todo tiempo"
                 width={500}
                 height={500}
-                title="Pre Convención Condado del Bronx"
+                title="Pre Convención Orando en todo tiempo"
                 className="w-auto h-auto mx-auto rounded-lg"
                 loading="lazy"
               />
             </div>
             <div>
               <Image
-                src="/images/events/pre-convencion-orando-en-todo-tiempo.jpeg"
-                alt="Pre Convención Orando en todo tiempo"
+                src="/images/events/pre-convencion-feb.jpg"
+                alt="Pre Convención Condado Mass Norte Rhode Island"
                 width={500}
                 height={500}
-                title="Pre Convención Orando en todo tiempo"
+                title="Pre Convención Condado Mass Norte Rhode Island"
+                className="w-auto h-auto mx-auto rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <Image
+                src="/images/events/manten-lampara-encendida.jpeg"
+                alt="Manten tu Lámpara Encendida"
+                width={500}
+                height={500}
+                title="Manten tu Lámpara Encendida"
                 className="w-auto h-auto mx-auto rounded-lg"
                 loading="lazy"
               />
