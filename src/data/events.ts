@@ -20,16 +20,12 @@ export const eventsList: EventItem[] = [
     place: "Boston/Rhode Island (Mass Norte)",
     date: "14/Feb/25",
   },
-  {
-    id: "3",
-    place: "Bronx",
-    date: "24/Jan/25",
-  },
+
   {
     id: "4",
     place: "Brooklyn",
     date: "1/Mar/25",
-  },  
+  },
   {
     id: "5",
     tag: "Buffalo/Up State NY",
@@ -51,11 +47,7 @@ export const eventsList: EventItem[] = [
     place: "New Jersey Norte",
     date: "7/Feb/25",
   },
-  {
-    id: "9",
-    place: "New Jersey Sur/DE",
-    date: "18/Jan/25",
-  },
+
   {
     id: "11",
     place: "Pennsylvania",
@@ -66,9 +58,4 @@ export const eventsList: EventItem[] = [
     place: "Queens/Long Island",
     date: "7/Mar/25",
   },
-  {
-    id: "13",
-    place: "WashDC/MD/VA/NC",
-    date: "25/Jan/25",
-  },  
 ];

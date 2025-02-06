@@ -25,6 +25,24 @@ const FormulariosPage = () => {
         <Card>
           <CardContent className="pt-6 flex justify-between items-center">
             <h3 className="flex-1">
+              Aplicación Campamento 2025{" "}
+              <span className="text-sm italic text-[red]">(nuevo)</span>
+            </h3>
+            <div className="flex-1 text-center">PDF</div>
+            <Button className="w-fit" variant="secondary">
+              <Link
+                href={"/documentos/APLICACION-CAMPAMENTO-ACHC.pdf"}
+                target="_blank"
+              >
+                Descargar
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="pt-6 flex justify-between items-center">
+            <h3 className="flex-1">
               Forma de Solicitud para Candidatura para la Junta
             </h3>
             <div className="flex-1 text-center">PDF</div>

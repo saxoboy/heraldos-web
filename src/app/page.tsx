@@ -459,6 +459,17 @@ export default function Home() {
             </div>
             <div>
               <Image
+                src="/images/events/pre-convencion.jpeg"
+                alt="Pre Convención de Caballeros 'A quien buscais?, Yo soy'"
+                width={500}
+                height={500}
+                title="Pre Convención de Caballeros 'A quien buscais?, Yo soy'"
+                className="w-auto h-auto mx-auto rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <Image
                 src="/images/events/pre-convencion-feb.jpg"
                 alt="Pre Convención Condado Mass Norte Rhode Island"
                 width={500}
