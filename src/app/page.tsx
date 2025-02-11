@@ -415,7 +415,7 @@ export default function Home() {
             relacionada a ellos
           </p>
 
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 py-12">
             {/* {eventos.map((event) => (
               <article key={event.id}>
                 <Card className="w-[350px] transition-all hover:shadow-xl">
@@ -448,17 +448,6 @@ export default function Home() {
             ))} */}
             <div>
               <Image
-                src="/images/events/pre-convencion-orando-en-todo-tiempo.jpeg"
-                alt="Pre Convención Orando en todo tiempo"
-                width={500}
-                height={500}
-                title="Pre Convención Orando en todo tiempo"
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <Image
                 src="/images/events/pre-convencion.jpeg"
                 alt="Pre Convención de Caballeros 'A quien buscais?, Yo soy'"
                 width={500}
@@ -475,6 +464,17 @@ export default function Home() {
                 width={500}
                 height={500}
                 title="Pre Convención Condado Mass Norte Rhode Island"
+                className="w-auto h-auto mx-auto rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <Image
+                src="/images/events/pre-convencion-pennsylvania.jpeg"
+                alt="Permaneciendo en Cristo podemos llevar mucho fruto"
+                width={500}
+                height={500}
+                title="Permaneciendo en Cristo podemos llevar mucho fruto"
                 className="w-auto h-auto mx-auto rounded-lg"
                 loading="lazy"
               />
