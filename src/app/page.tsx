@@ -446,17 +446,7 @@ export default function Home() {
                 </Card>
               </article>
             ))} */}
-            <div>
-              <Image
-                src="/images/events/pre-convencion.jpeg"
-                alt="Pre Convención de Caballeros 'A quien buscais?, Yo soy'"
-                width={500}
-                height={500}
-                title="Pre Convención de Caballeros 'A quien buscais?, Yo soy'"
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-            </div>
+
             <div>
               <Image
                 src="/images/events/pre-convencion-feb.jpg"
@@ -486,6 +476,17 @@ export default function Home() {
                 width={500}
                 height={500}
                 title="Manten tu Lámpara Encendida"
+                className="w-auto h-auto mx-auto rounded-lg"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <Image
+                src="/images/events/pre-convencion-brooklyn.jpeg"
+                alt="Pre Convención de Caballeros Brooklyn"
+                width={500}
+                height={500}
+                title="Pre Convención de Caballeros Brooklyn"
                 className="w-auto h-auto mx-auto rounded-lg"
                 loading="lazy"
               />
