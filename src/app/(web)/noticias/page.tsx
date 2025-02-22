@@ -40,7 +40,7 @@ const NoticiasPage = () => {
                       alt={noticia.title}
                       width={350}
                       height={350}
-                      className="w-full h-auto mx-auto rounded-xl z-0"
+                      className="w-full h-auto mx-auto rounded-xl z-0 aspect-video object-cover"
                       loading="lazy"
                     />
                     <Badge

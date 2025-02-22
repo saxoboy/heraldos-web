@@ -11,41 +11,18 @@ export interface EventItem {
 
 export const eventsList: EventItem[] = [
   {
-    id: "1",
-    place: "Albany/Springfield (Mass Sur)",
-    date: "8/Mar/25",
-  },
-  {
-    id: "2",
-    place: "Boston/Rhode Island (Mass Norte)",
-    date: "14/Feb/25",
-  },
-
-  {
     id: "4",
     place: "Brooklyn",
     date: "1/Mar/25",
   },
   {
-    id: "5",
-    tag: "Buffalo/Up State NY",
-    place: "Connecticut",
-    date: "22/Feb/25",
-  },
-  {
-    id: "7",
-    place: "New Jersey Centro",
-    date: "15/Feb/25",
-  },
-
-  {
-    id: "11",
-    place: "Pennsylvania",
-    date: "21/Feb/25",
-  },
-  {
     id: "12",
     place: "Queens/Long Island",
     date: "7/Mar/25",
+  },
+  {
+    id: "1",
+    place: "Albany/Springfield (Mass Sur)",
+    date: "8/Mar/25",
   },
 ];

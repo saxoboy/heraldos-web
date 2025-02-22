@@ -202,7 +202,7 @@ export default function Home() {
                     alt={noticiaDestacada.title}
                     width={800}
                     height={600}
-                    className="w-full h-auto mx-auto rounded-xl z-0"
+                    className="w-full h-auto mx-auto rounded-xl z-0 aspect-video object-cover"
                     loading="lazy"
                   />
                 </Link>
@@ -243,7 +243,7 @@ export default function Home() {
                           alt={noticia.title}
                           width={350}
                           height={350}
-                          className="w-full h-auto mx-auto rounded-xl z-0"
+                          className="w-full h-auto mx-auto rounded-xl z-0 aspect-video object-cover"
                           loading="lazy"
                         />
                       </Link>
@@ -415,7 +415,7 @@ export default function Home() {
             relacionada a ellos
           </p>
 
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 py-12">
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
             {/* {eventos.map((event) => (
               <article key={event.id}>
                 <Card className="w-[350px] transition-all hover:shadow-xl">
@@ -449,45 +449,23 @@ export default function Home() {
 
             <div>
               <Image
-                src="/images/events/pre-convencion-feb.jpg"
-                alt="Pre Convención Condado Mass Norte Rhode Island"
-                width={500}
-                height={500}
-                title="Pre Convención Condado Mass Norte Rhode Island"
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/events/pre-convencion-pennsylvania.jpeg"
-                alt="Permaneciendo en Cristo podemos llevar mucho fruto"
-                width={500}
-                height={500}
-                title="Permaneciendo en Cristo podemos llevar mucho fruto"
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/events/manten-lampara-encendida.jpeg"
-                alt="Manten tu Lámpara Encendida"
-                width={500}
-                height={500}
-                title="Manten tu Lámpara Encendida"
-                className="w-auto h-auto mx-auto rounded-lg"
-                loading="lazy"
-              />
-            </div>
-            <div>
-              <Image
                 src="/images/events/pre-convencion-brooklyn.jpeg"
                 alt="Pre Convención de Caballeros Brooklyn"
-                width={500}
-                height={500}
+                width={300}
+                height={300}
                 title="Pre Convención de Caballeros Brooklyn"
-                className="w-auto h-auto mx-auto rounded-lg"
+                className="w-auto h-auto mx-auto rounded-lg aspect-video object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <Image
+                src="/images/events/fortaleciendo-nuestra-muralla.jpeg"
+                alt="Fortaleciendo nuestra muralla"
+                width={300}
+                height={300}
+                title="Fortaleciendo nuestra muralla"
+                className="w-auto h-auto mx-auto rounded-lg aspect-video object-cover"
                 loading="lazy"
               />
             </div>
