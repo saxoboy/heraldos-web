@@ -194,7 +194,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 10,
-    title: "Pre Conversión New Jersey Sur",
+    title: "Pre conversión Boston/RI",
     slug: "pre-conversion-Bos-RI",
     photos: [
       "/images/noticias/pre-conversion-Bos-RI/pre-conversion-Bos-RI-1.jpeg",

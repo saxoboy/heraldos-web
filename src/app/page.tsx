@@ -454,7 +454,7 @@ export default function Home() {
                 width={300}
                 height={300}
                 title="Pre Convención de Caballeros Brooklyn"
-                className="w-auto h-auto mx-auto rounded-lg aspect-video object-cover"
+                className="w-auto h-auto mx-auto rounded-lg lg:aspect-video lg:object-cover"
                 loading="lazy"
               />
             </div>
@@ -465,7 +465,7 @@ export default function Home() {
                 width={300}
                 height={300}
                 title="Fortaleciendo nuestra muralla"
-                className="w-auto h-auto mx-auto rounded-lg aspect-video object-cover"
+                className="w-auto h-auto mx-auto rounded-lg lg:aspect-video lg:object-cover"
                 loading="lazy"
               />
             </div>
