@@ -469,6 +469,17 @@ export default function Home() {
                 loading="lazy"
               />
             </div>
+            <div>
+              <Image
+                src="/images/events/convencion-conquistando-lo-prometido.jpeg"
+                alt="Sexagésima Convención Conquistando lo Prometido"
+                width={300}
+                height={300}
+                title="Sexagésima Convención Conquistando lo Prometido"
+                className="w-auto h-auto mx-auto rounded-lg lg:aspect-video lg:object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
 
           <div className="flex justify-center">
