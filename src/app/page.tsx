@@ -445,20 +445,8 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </article>
-            ))} */}
-
-            <div>
-              <Image
-                src="/images/events/pre-convencion-brooklyn.jpeg"
-                alt="Pre Convención de Caballeros Brooklyn"
-                width={300}
-                height={300}
-                title="Pre Convención de Caballeros Brooklyn"
-                className="w-auto h-auto mx-auto rounded-lg lg:aspect-video lg:object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div>
+            ))} */}            
+            {/* <div>
               <Image
                 src="/images/events/fortaleciendo-nuestra-muralla.jpeg"
                 alt="Fortaleciendo nuestra muralla"
@@ -468,7 +456,7 @@ export default function Home() {
                 className="w-auto h-auto mx-auto rounded-lg lg:aspect-video lg:object-cover"
                 loading="lazy"
               />
-            </div>
+            </div> */}
             <div>
               <Image
                 src="/images/events/convencion-conquistando-lo-prometido.jpeg"
