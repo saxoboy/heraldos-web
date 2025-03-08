@@ -445,18 +445,7 @@ export default function Home() {
                   </CardContent>
                 </Card>
               </article>
-            ))} */}            
-            {/* <div>
-              <Image
-                src="/images/events/fortaleciendo-nuestra-muralla.jpeg"
-                alt="Fortaleciendo nuestra muralla"
-                width={300}
-                height={300}
-                title="Fortaleciendo nuestra muralla"
-                className="w-auto h-auto mx-auto rounded-lg lg:aspect-video lg:object-cover"
-                loading="lazy"
-              />
-            </div> */}
+            ))} */}
             <div>
               <Image
                 src="/images/events/convencion-conquistando-lo-prometido.jpeg"

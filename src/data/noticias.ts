@@ -135,7 +135,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 7,
-    title: "Pre Conversión New Jersey Norte",
+    title: "Pre Convensión New Jersey Norte",
     slug: "pre-conversion-new-jersey-norte",
     photos: [
       "/images/noticias/Pre-Conversion-New-Jersey-Norte/Pre-Conversion-New-Jersey Norte-2.jpeg",
@@ -152,7 +152,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 8,
-    title: "Pre Conversión Washington/MD/VA/NC",
+    title: "Pre Convensión Washington/MD/VA/NC",
     slug: "pre-conversion-washington-md-va-nc",
     photos: [
       "/images/noticias/Pre-Conversion-Washington/Pre-Conversion-Washington-1.jpeg",
@@ -172,7 +172,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 9,
-    title: "Pre conversión NJC",
+    title: "Pre convensión NJC",
     slug: "pre-conversion-njc",
     photos: [
       "/images/noticias/pre-conversion-NJC/pre-conversion-NJC-1.jpeg",
@@ -226,7 +226,29 @@ export const noticiasList: NoticiasItem[] = [
       "/images/noticias/pre-convension-ct/pre-convension-ct-11.jpeg",
       "/images/noticias/pre-convension-ct/pre-convension-ct-12.jpeg",
       "/images/noticias/pre-convension-ct/pre-convension-ct-13.jpeg",
-      "/images/noticias/pre-convension-ct/pre-convension-ct-14.jpeg",      
+      "/images/noticias/pre-convension-ct/pre-convension-ct-14.jpeg",
+    ],
+    place: "Centro de Convenciones",
+    category: "Convenciones",
+    date: "Febrero 2025",
+    content: "",
+  },
+  {
+    id: 12,
+    title: "Pre convensión Queen/LI",
+    slug: "pre-convension-queen-li",
+    photos: [
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-1.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-2.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-3.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-4.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-5.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-6.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-7.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-8.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-9.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-10.jpeg",
+      "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-11.jpeg",
     ],
     place: "Centro de Convenciones",
     category: "Convenciones",
