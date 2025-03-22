@@ -25,32 +25,32 @@ export const products = [
     name: "Pin",
     image: "ping.jpeg",
   },
-  {
-    id: 3,
-    name: "Camiseta Cuello",
-    image: "camiseta-cuello.jpeg",
-    talla: ETalla.S as string,
-  },
-  {
-    id: 4,
-    name: "Camiseta manga corta",
-    image: "camiseta-negra.jpeg",
-    talla: ETalla.S as string,
-  },
-  {
-    id: 5,
-    name: "Taza",
-    image: "taza.jpeg",
-  },
-  {
-    id: 6,
-    name: "Camiseta manga larga",
-    image: "buzo-blanco.jpeg",
-    talla: ETalla.S as string,
-  },
-  {
-    id: 7,
-    name: "Gorra",
-    image: "gorra.jpeg",
-  },
+  // {
+  //   id: 3,
+  //   name: "Camiseta Cuello",
+  //   image: "camiseta-cuello.jpeg",
+  //   talla: ETalla.S as string,
+  // },
+  // {
+  //   id: 4,
+  //   name: "Camiseta manga corta",
+  //   image: "camiseta-negra.jpeg",
+  //   talla: ETalla.S as string,
+  // },
+  // {
+  //   id: 5,
+  //   name: "Taza",
+  //   image: "taza.jpeg",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Camiseta manga larga",
+  //   image: "buzo-blanco.jpeg",
+  //   talla: ETalla.S as string,
+  // },
+  // {
+  //   id: 7,
+  //   name: "Gorra",
+  //   image: "gorra.jpeg",
+  // },
 ];

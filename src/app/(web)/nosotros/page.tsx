@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TitleHeader from "@/components/title-header";
+import Link from "next/link";
 
 const NosotrosPage = () => {
   return (
@@ -32,13 +33,13 @@ const NosotrosPage = () => {
 
       <section className="relative flex flex-col lg:flex-row container space-y-4 lg:space-y-0 lg:space-x-4 mb-12">
         <div className="w-full lg:w-1/3 text-center">
-          <h2>Junta Directiva</h2>
+          <h2><Link href="/nosotros/junta-ejecutiva">Junta Directiva</Link></h2>
         </div>
         <div className="w-full lg:w-1/3 text-center">
-          <h2>Presidentes de Paises Foreanos</h2>
+          <h2><Link href="/nosotros/vicepresidentes-condados">Presidentes de Paises Foreanos</Link></h2>
         </div>
         <div className="w-full lg:w-1/3 text-center">
-          <h2>Vicepresidentes de Condados</h2>
+          <h2><Link href="/nosotros/presidentes-paises-foraneos">Vicepresidentes de Condados</Link></h2>
         </div>
       </section>
     </>

@@ -12,7 +12,7 @@ export interface NoticiasItem {
 export const noticiasList: NoticiasItem[] = [
   {
     id: 1,
-    title: "Pre convenciones 2024",
+    title: "Convensión 2024",
     slug: "pre-convenciones-2024",
     photos: [
       "/images/noticias/0f75927d-691a-45e6-9e78-8cf70c5c0060.jpeg",
@@ -135,7 +135,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 7,
-    title: "Pre Convensión New Jersey Norte",
+    title: "Convensión New Jersey Norte",
     slug: "pre-conversion-new-jersey-norte",
     photos: [
       "/images/noticias/Pre-Conversion-New-Jersey-Norte/Pre-Conversion-New-Jersey Norte-2.jpeg",
@@ -152,7 +152,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 8,
-    title: "Pre Convensión Washington/MD/VA/NC",
+    title: "Convensión Washington/MD/VA/NC",
     slug: "pre-conversion-washington-md-va-nc",
     photos: [
       "/images/noticias/Pre-Conversion-Washington/Pre-Conversion-Washington-1.jpeg",
@@ -172,7 +172,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 9,
-    title: "Pre convensión NJC",
+    title: "Convensión NJC",
     slug: "pre-conversion-njc",
     photos: [
       "/images/noticias/pre-conversion-NJC/pre-conversion-NJC-1.jpeg",
@@ -194,7 +194,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 10,
-    title: "Pre convensión Boston/RI",
+    title: "Convensión Boston/RI",
     slug: "pre-conversion-Bos-RI",
     photos: [
       "/images/noticias/pre-conversion-Bos-RI/pre-conversion-Bos-RI-1.jpeg",
@@ -210,7 +210,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 11,
-    title: "Pre convensión CT",
+    title: "Convensión CT",
     slug: "pre-convension-ct",
     photos: [
       "/images/noticias/pre-convension-ct/pre-convension-ct-1.jpeg",
@@ -235,7 +235,7 @@ export const noticiasList: NoticiasItem[] = [
   },
   {
     id: 12,
-    title: "Pre convensión Queen/LI",
+    title: "Convensión Queen/LI",
     slug: "pre-convension-queen-li",
     photos: [
       "/images/noticias/pre-convension-queen-li/pre-convension-queen-li-1.jpeg",

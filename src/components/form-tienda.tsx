@@ -243,7 +243,7 @@ export default function FormTienda() {
                   )}
 
                   {/* Si el producto tiene tallas, mostrar el selector de talla por cada cantidad */}
-                  {product.talla &&
+                  {/* {product.talla &&
                     formData.selectedItems.some(
                       (item) => item.id === product.id
                     ) && (
@@ -283,7 +283,7 @@ export default function FormTienda() {
                           </Select>
                         ))}
                       </>
-                    )}
+                    )} */}
                 </div>
               ))}
             </div>
