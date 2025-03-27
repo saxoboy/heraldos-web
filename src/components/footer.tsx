@@ -32,16 +32,16 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="text-orange-bg text-2xl mb-6">Contactos</h3>
-              <div className="flex justify-normal items-start space-x-4 text-white">
+              <div className="flex justify-normal items-center gap-4 text-white">
                 <Smartphone className="text-white text-2xl" />
                 <p className="w-52 text-gray-txt">
-                  Teléfono: +1 (240) 644-8582
+                  Teléfono: <Link href="tel:+12406448582">+1 (240) 644-8582</Link>
                 </p>
               </div>
-              <div className="flex justify-normal items-start space-x-4 text-white">
+              <div className="flex justify-normal items-center gap-4 text-white">
                 <Mail className="text-white text-2xl" />
                 <p className="w-52 text-gray-txt">
-                  E-mail: info@heraldoscristo.com
+                  E-mail: <Link href="mailto:vpheraldosdecristo@gmail.com">vpheraldosdecristo@gmail.com</Link>
                 </p>
               </div>
             </div>

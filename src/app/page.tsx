@@ -1,20 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowRightIcon,
-  Calendar,
-  CalendarDaysIcon,
-  MoveRight,
-} from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import { EmblaOptionsType } from "embla-carousel";
 import VideoHero from "@/components/video-hero";
 import Title from "@/components/title";
 import TitleHeader from "@/components/title-header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import EmblaCarousel from "@/components/EmblaCarousel";
 import ShapeTop from "@/components/ui/shape-top";
-import ShapeBottom from "@/components/ui/shape-bottom";
 import { Badge } from "@/components/ui/badge";
 import ShapeTopOrange from "@/components/ui/shape-top-orange";
 import LogoAsociacionNinos from "~/images/icon-asociacion-ninos.png";
@@ -447,7 +440,8 @@ export default function Home() {
               </article>
             ))} */}
             <div>
-              <Image
+              <p className="text-center text-xl">No hay eventos disponibles</p>
+              {/* <Image
                 src="/images/events/convencion-conquistando-lo-prometido.jpeg"
                 alt="Sexagésima Convención Conquistando lo Prometido"
                 width={300}
@@ -455,7 +449,7 @@ export default function Home() {
                 title="Sexagésima Convención Conquistando lo Prometido"
                 className="w-auto h-auto mx-auto rounded-lg lg:aspect-video lg:object-cover"
                 loading="lazy"
-              />
+              /> */}
             </div>
           </div>
 

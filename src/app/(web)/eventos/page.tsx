@@ -1,10 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import TitleHeader from "@/components/title-header";
 import { eventsList } from "@/data/events";
-import { Button } from "@/components/ui/button";
 
 const EventosPage = () => {
   const eventos = eventsList;
@@ -52,6 +49,7 @@ const EventosPage = () => {
               <Button variant="ghost">Mensual</Button>
             </div>
           </div> */}
+          <p className="text-center text-xl">No hay eventos disponibles</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {eventos.map((event) => (
               <Card
@@ -113,7 +111,7 @@ const EventosPage = () => {
                   </CardContent>
                 </div>
               </Card>
-            ))}
+            ))}            
           </div>
         </div>
         {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
