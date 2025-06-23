@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import TitleHeader from "@/components/title-header";
 import { eventsList } from "@/data/events";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const EventosPage = () => {
   const eventos = eventsList;
@@ -23,13 +25,232 @@ const EventosPage = () => {
         </div>
       </section>
       <section className="relative container">
-        <div className="text-center">
+        <header className="text-center mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-blue-title">
+            Agenda de Eventos 2025-2026
+          </h1>
+          <p className="text-lg text-blue-txt mt-2">
+            Asociación de Caballeros Heraldos de Cristo C.L.A.
+          </p>
+        </header>
+
+        <div className="shadow-md rounded-lg overflow-hidden mb-12 max-w-2xl mx-auto">
+          <div className="overflow-x-auto ">
+            <table className="min-w-full divide-y divide-orange-bgTwo">
+              <thead className=" bg-orange-bg text-blue-bgTwo">
+                <tr>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider"
+                  >
+                    Fecha
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider"
+                  >
+                    Nombre del Evento
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                <tr className="bg-gray-bg">
+                  <td
+                    colSpan={2}
+                    className="px-6 py-4 whitespace-nowrap text-sm font-bold "
+                  >
+                    AÑO 2025
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    11 de julio de 2025
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    JUBILEO ACHC PRESBITERIO PA
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    15, 16, 17 de agosto de 2025
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    CAMPAMENTO GENERAL ACHC CAMP MAHANAIM
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    5 de septiembre de 2025
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    TRIMESTRAL ACHC PRESBITERIO MANHATTAN
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    10 de octubre de 2025
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    JUBILEO ACHC PRESBITERIO NJ CENTRO
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    8 de noviembre de 2025
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    JUBILEO ACHC PRESBITERIO CONNECTICUT
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    6 de diciembre de 2025
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    CENA NAVIDEÑA ACHC DIRECTIVA Y VP`S Y FAMILIA
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    13 de diciembre de 2025
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    TRIMESTRAL ACHC PRESBITERIO WASH/DC/MD/VA/NC
+                  </td>
+                </tr>
+
+                <tr className="bg-gray-bg">
+                  <td
+                    colSpan={2}
+                    className="px-6 py-4 whitespace-nowrap text-sm font-bold "
+                  >
+                    AÑO 2026
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    17 de enero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN PRESBITERIO WASH/DC/MD/VA/NC
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    23 de enero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO BRONX
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    24 de enero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO NJ SUR
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    30 de enero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO MANHATTAN
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    31 de enero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO BROOKLYN
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    6 de febrero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO NJ NORTE
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    13 de febrero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO NJ CENTRAL
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    14 de febrero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO MASS. NORTE
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    20 de febrero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO PENNSYLVANIA
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    21 de febrero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE CONVENCIÓN ACHC PRESBITERIO CONNECTICUT
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    27 de febrero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE CONVENCIÓN ACHC PRESBITERIO QUEENS/LI
+                  </td>
+                </tr>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    28 de febrero de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    PRE-CONVENCIÓN ACHC PRESBITERIO MASS. WEST
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    20 y 21 de marzo de 2026
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                    CONVENCIÓN INTERNACIONAL ACHC CLA
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="flex justify-center space-x-4 mb-8">
+          <Button asChild variant="secondary">
+            <Link
+              href={"/documentos/agenda-2025-26-asociacion-de-caballeros.pdf"}
+            >
+              Descargar Agenda de Eventos
+            </Link>
+          </Button>
+        </div>
+        {/* <div className="text-center">
           <h1 className="text-4xl">Asociación de Caballeros</h1>
           <h2 className="text-2xl">Heraldos de Cristo C.L.A.</h2>
           <p>Preconvenciones ACHC 2025</p>
-        </div>
-        <div className="w-full mx-auto p-4 space-y-6 mb-8 max-w-5xl">
-          {/* <div className="flex items-center justify-between">
+        </div> */}
+        {/* <div className="w-full mx-auto p-4 space-y-6 mb-8 max-w-5xl">
+          <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Button variant="ghost" size="icon">
                 <ChevronLeft className="h-4 w-4" />
@@ -48,7 +269,7 @@ const EventosPage = () => {
               </Button>
               <Button variant="ghost">Mensual</Button>
             </div>
-          </div> */}
+          </div>
           <p className="text-center text-xl">No hay eventos disponibles</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {eventos.map((event) => (
@@ -100,20 +321,20 @@ const EventosPage = () => {
                           </p>
                         )}
                       </div>
-                      {/* <Button
+                      <Button
                         variant="ghost"
                         size="icon"
                         className="text-orange-500"
                       >
                         <ArrowRight className="h-6 w-6" />
-                      </Button> */}
+                      </Button>
                     </div>
                   </CardContent>
                 </div>
               </Card>
             ))}            
           </div>
-        </div>
+        </div> */}
         {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {eventos.map((event) => (
             <Card key={event.id} className="p-4 shadow-lg lg:max-w-96">
