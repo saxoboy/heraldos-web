@@ -408,7 +408,95 @@ export default function Home() {
             relacionada a ellos
           </p>
 
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 py-12">
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 pt-12">
+            <div className="shadow-md rounded-lg overflow-hidden mb-12 max-w-2xl mx-auto">
+              <div className="overflow-x-auto ">
+                <table className="min-w-full divide-y divide-orange-bgTwo">
+                  <thead className=" bg-orange-bg text-blue-bgTwo">
+                    <tr>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider"
+                      >
+                        Fecha
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider"
+                      >
+                        Nombre del Evento
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    <tr className="bg-gray-bg">
+                      <td
+                        colSpan={2}
+                        className="px-6 py-4 whitespace-nowrap text-sm font-bold "
+                      >
+                        AÑO 2025
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        11 de julio de 2025
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        JUBILEO ACHC PRESBITERIO PA
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        15, 16, 17 de agosto de 2025
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        CAMPAMENTO GENERAL ACHC CAMP MAHANAIM
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        5 de septiembre de 2025
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        TRIMESTRAL ACHC PRESBITERIO MANHATTAN
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        10 de octubre de 2025
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        JUBILEO ACHC PRESBITERIO NJ CENTRO
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        8 de noviembre de 2025
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        JUBILEO ACHC PRESBITERIO CONNECTICUT
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        6 de diciembre de 2025
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        CENA NAVIDEÑA ACHC DIRECTIVA Y VP`S Y FAMILIA
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        13 de diciembre de 2025
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        TRIMESTRAL ACHC PRESBITERIO WASH/DC/MD/VA/NC
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
             {/* {eventos.map((event) => (
               <article key={event.id}>
                 <Card className="w-[350px] transition-all hover:shadow-xl">
@@ -440,7 +528,7 @@ export default function Home() {
               </article>
             ))} */}
             <div>
-              <p className="text-center text-xl">No hay eventos disponibles</p>
+              {/* <p className="text-center text-xl">No hay eventos disponibles</p> */}
               {/* <Image
                 src="/images/events/convencion-conquistando-lo-prometido.jpeg"
                 alt="Sexagésima Convención Conquistando lo Prometido"
