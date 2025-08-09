@@ -437,14 +437,6 @@ export default function Home() {
                         AÑO 2025
                       </td>
                     </tr>
-                    <tr>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        11 de julio de 2025
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        JUBILEO ACHC PRESBITERIO PA
-                      </td>
-                    </tr>
                     <tr className="bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         15, 16, 17 de agosto de 2025
