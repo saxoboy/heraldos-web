@@ -429,30 +429,6 @@ export default function Home() {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    <tr className="bg-gray-bg">
-                      <td
-                        colSpan={2}
-                        className="px-6 py-4 whitespace-nowrap text-sm font-bold "
-                      >
-                        AÑO 2025
-                      </td>
-                    </tr>                    
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        10 de octubre de 2025
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        JUBILEO ACHC PRESBITERIO NJ CENTRO
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        8 de noviembre de 2025
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        JUBILEO ACHC PRESBITERIO CONNECTICUT
-                      </td>
-                    </tr>
                     <tr className="bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         6 de diciembre de 2025
