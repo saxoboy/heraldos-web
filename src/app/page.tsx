@@ -411,8 +411,8 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 pt-12">
             <div className="shadow-md rounded-lg overflow-hidden mb-12 max-w-2xl mx-auto">
               <div className="overflow-x-auto ">
-                <table className="min-w-full divide-y divide-orange-bgTwo">
-                  <thead className=" bg-orange-bg text-blue-bgTwo">
+                <table className="min-w-full divide-y divide-orange-bg-two">
+                  <thead className=" bg-orange-bg text-blue-bg-two">
                     <tr>
                       <th
                         scope="col"

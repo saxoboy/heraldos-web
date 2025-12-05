@@ -36,8 +36,8 @@ const EventosPage = () => {
 
         <div className="shadow-md rounded-lg overflow-hidden mb-12 max-w-2xl mx-auto">
           <div className="overflow-x-auto ">
-            <table className="min-w-full divide-y divide-orange-bgTwo">
-              <thead className=" bg-orange-bg text-blue-bgTwo">
+            <table className="min-w-full divide-y divide-orange-bg-two">
+              <thead className=" bg-orange-bg text-blue-bg-two">
                 <tr>
                   <th
                     scope="col"

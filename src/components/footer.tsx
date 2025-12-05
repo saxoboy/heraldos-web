@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-blue-bgTwo">
+      <div className="bg-blue-bg-two">
         <div className="container mx-auto py-10 text-center text-sm text-gray-txt">
           <p className="m-0 text-[#97AAD2] tracking-wider">
             Asociación de Caballeros “Heraldos de Cristo” © 2024. Todos los

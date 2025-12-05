@@ -164,7 +164,7 @@ const GalleryPhotos = ({ title, photos }: GalleryPhotosProps) => {
               )}
 
               {/* Overlay hover effect */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none" />
             </div>
           );
         })}
@@ -173,7 +173,7 @@ const GalleryPhotos = ({ title, photos }: GalleryPhotosProps) => {
       {/* Lightbox Modal */}
       {selectedIndex !== null && currentMedia && (
         <div
-          className="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out"
+          className="fixed inset-0 bg-black/90 backdrop-blur-xs flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out"
           onClick={handleOverlayClick}
         >
           {/* Contador de imágenes */}
@@ -289,7 +289,7 @@ const GalleryPhotos = ({ title, photos }: GalleryPhotosProps) => {
                       e.stopPropagation();
                       navigateToMedia(index);
                     }}
-                    className={`relative flex-shrink-0 w-16 h-16 rounded-md overflow-hidden transition-all duration-200 ${index === selectedIndex
+                    className={`relative shrink-0 w-16 h-16 rounded-md overflow-hidden transition-all duration-200 ${index === selectedIndex
                       ? "ring-2 ring-white scale-110"
                       : "opacity-60 hover:opacity-100"
                       }`}

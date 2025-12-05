@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 const VideoHero = () => {
   return (
-    <section className="bg-gradient-to-b from-blue-bg to-[#932616] relative">
+    <section className="bg-linear-to-b from-blue-bg to-[#932616] relative">
       <div className="relative p-0">
         <video
           src="/videos/video-home.mp4?thumbnailTime=0"
