@@ -8,13 +8,13 @@ import { MultimediaItem, multimediaList } from "@/data/multimedia";
 import GalleryPhotos from "../_components/gallery";
 
 interface MultimediaItemPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-const MultimediaPage: FC<MultimediaItemPageProps> = ({ params }) => {
-  const { slug } = params;
+const MultimediaPage: FC<MultimediaItemPageProps> = async ({ params }) => {
+  const { slug } = await params;
   const multimedia = multimediaList.find(
     (events: MultimediaItem) => events.slug === slug
   );
