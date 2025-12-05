@@ -8,13 +8,13 @@ import { EventItem, eventsList } from "@/data/events";
 import GalleryPhotos from "../_components/gallery";
 
 interface EventsPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-const EventsPage: FC<EventsPageProps> = ({ params }) => {
-  const { slug } = params;
+const EventsPage: FC<EventsPageProps> = async ({ params }) => {
+  const { slug } = await params;
   const event = eventsList.find((events: EventItem) => events.slug === slug);
 
   if (!event) {
@@ -48,7 +48,7 @@ const EventsPage: FC<EventsPageProps> = ({ params }) => {
           <Separator />
           <h3 className="text-blue-title">Fecha:</h3>
           <p>{event.date}</p>
-          <Separator />          
+          <Separator />
           <h3 className="mb-2">Compartir:</h3>
           <div className="flex gap-4 justify-end">
             <ShareLink

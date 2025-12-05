@@ -9,13 +9,13 @@ import { NoticiasItem, noticiasList } from "@/data/noticias";
 import GalleryPhotos from "../../multimedia/_components/gallery";
 
 interface NoticiaPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-const NoticiaPage: FC<NoticiaPageProps> = ({ params }) => {
-  const { slug } = params;
+const NoticiaPage: FC<NoticiaPageProps> = async ({ params }) => {
+  const { slug } = await params;
   const noticia = noticiasList.find(
     (noticia: NoticiasItem) => noticia.slug === slug
   );
