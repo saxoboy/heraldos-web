@@ -431,18 +431,34 @@ export default function Home() {
                   <tbody className="bg-white divide-y divide-gray-200">
                     <tr className="bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        6 de diciembre de 2025
+                        23 de enero de 2026
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        CENA NAVIDEÑA ACHC DIRECTIVA Y VP`S Y FAMILIA
+                        PRE-CONVENCIÓN ACHC PRESBITERIO BRONX
                       </td>
                     </tr>
                     <tr>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        13 de diciembre de 2025
+                        24 de enero de 2026
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        TRIMESTRAL ACHC PRESBITERIO WASH/DC/MD/VA/NC
+                        PRE-CONVENCIÓN ACHC PRESBITERIO NJ SUR
+                      </td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        30 de enero de 2026
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        PRE-CONVENCIÓN ACHC PRESBITERIO MANHATTAN
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                        31 de enero de 2026
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                        PRE-CONVENCIÓN ACHC PRESBITERIO BROOKLYN
                       </td>
                     </tr>
                   </tbody>

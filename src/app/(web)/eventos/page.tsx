@@ -11,7 +11,7 @@ const EventosPage = () => {
   return (
     <>
       <section className="-top-[50px] relative mb-8">
-        <div className="container mx-auto max-w-[768px] lg:max-w-[1024px] pt-16 lg:pt-0">
+        <div className="container mx-auto max-w-3xl lg:max-w-5xl pt-16 lg:pt-0">
           <Image
             src="/images/eventos.png"
             alt=""
@@ -54,31 +54,6 @@ const EventosPage = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                <tr className="bg-gray-bg">
-                  <td
-                    colSpan={2}
-                    className="px-6 py-4 whitespace-nowrap text-sm font-bold "
-                  >
-                    AÑO 2025
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    6 de diciembre de 2025
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    CENA NAVIDEÑA ACHC DIRECTIVA Y VP`S Y FAMILIA
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    13 de diciembre de 2025
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    TRIMESTRAL ACHC PRESBITERIO WASH/DC/MD/VA/NC
-                  </td>
-                </tr>
-
                 <tr className="bg-gray-bg">
                   <td
                     colSpan={2}
