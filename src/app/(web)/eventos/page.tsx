@@ -27,7 +27,7 @@ const EventosPage = () => {
       <section className="relative container">
         <header className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl font-bold text-blue-title">
-            Agenda de Eventos 2025-2026
+            Agenda de Eventos 2026-2027
           </h1>
           <p className="text-lg text-blue-txt mt-2">
             Asociación de Caballeros Heraldos de Cristo C.L.A.
@@ -36,7 +36,7 @@ const EventosPage = () => {
 
         <div className="shadow-md rounded-lg overflow-hidden mb-12 max-w-2xl mx-auto">
           <div className="overflow-x-auto ">
-            <table className="min-w-full divide-y divide-orange-bg-two">
+            {/* <table className="min-w-full divide-y divide-orange-bg-two">
               <thead className=" bg-orange-bg text-blue-bg-two">
                 <tr>
                   <th
@@ -167,7 +167,7 @@ const EventosPage = () => {
                   </td>
                 </tr>
               </tbody>
-            </table>
+            </table> */}
           </div>
         </div>
         <div className="flex justify-center space-x-4 mb-8">
