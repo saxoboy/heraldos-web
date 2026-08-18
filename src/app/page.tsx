@@ -15,8 +15,11 @@ import LogoConcilioLatino from "~/images/icon-concilio-latinoamericano.png";
 import LogoJovenes from "~/images/icon-asociacion-jovenes.png";
 import LogoDamas from "~/images/icon-damas.png";
 
+import AgendaTable from "@/components/agenda-table";
+
 //import "./embla.css";
 import { eventsList } from "@/data/events";
+import { agendaList } from "@/data/agenda";
 import { noticiasList } from "@/data/noticias";
 
 export interface GaleryType {
@@ -72,6 +75,12 @@ export default function Home() {
     .sort((a, b) => Number(b.id) - Number(a.id))
     .slice(1, 4);
   const noticiaDestacada = noticiasList[0];
+  // Eventos del año en curso; si el año ya terminó se muestra el siguiente
+  // año disponible en la agenda.
+  const anioActual = new Date().getFullYear();
+  const agendaAnioActual = agendaList
+    .filter((agenda) => agenda.year >= anioActual)
+    .slice(0, 1);
 
   return (
     <>
@@ -409,62 +418,11 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start space-y-4 lg:space-y-0 lg:space-x-4 pt-12">
-            <div className="shadow-md rounded-lg overflow-hidden mb-12 max-w-2xl mx-auto">
-              <div className="overflow-x-auto ">
-                {/* <table className="min-w-full divide-y divide-orange-bg-two">
-                  <thead className=" bg-orange-bg text-blue-bg-two">
-                    <tr>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider"
-                      >
-                        Fecha
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider"
-                      >
-                        Nombre del Evento
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        23 de enero de 2026
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        PRE-CONVENCIÓN ACHC PRESBITERIO BRONX
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        24 de enero de 2026
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        PRE-CONVENCIÓN ACHC PRESBITERIO NJ SUR
-                      </td>
-                    </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        30 de enero de 2026
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        PRE-CONVENCIÓN ACHC PRESBITERIO MANHATTAN
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        31 de enero de 2026
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                        PRE-CONVENCIÓN ACHC PRESBITERIO BROOKLYN
-                      </td>
-                    </tr>
-                  </tbody>
-                </table> */}
-              </div>
-            </div>
+            <AgendaTable
+              agenda={agendaAnioActual}
+              showYear={false}
+              className="max-w-2xl"
+            />
             {/* {eventos.map((event) => (
               <article key={event.id}>
                 <Card className="w-[350px] transition-all hover:shadow-xl">

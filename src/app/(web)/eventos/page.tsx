@@ -1,13 +1,9 @@
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
 import TitleHeader from "@/components/title-header";
-import { eventsList } from "@/data/events";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import AgendaTable from "@/components/agenda-table";
+import { agendaList } from "@/data/agenda";
 
 const EventosPage = () => {
-  const eventos = eventsList;
-
   return (
     <>
       <section className="-top-[50px] relative mb-8">
@@ -34,151 +30,18 @@ const EventosPage = () => {
           </p>
         </header>
 
-        <div className="shadow-md rounded-lg overflow-hidden mb-12 max-w-2xl mx-auto">
-          <div className="overflow-x-auto ">
-            {/* <table className="min-w-full divide-y divide-orange-bg-two">
-              <thead className=" bg-orange-bg text-blue-bg-two">
-                <tr>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider"
-                  >
-                    Fecha
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-left text-xs font-semibold text-white uppercase tracking-wider"
-                  >
-                    Nombre del Evento
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                <tr className="bg-gray-bg">
-                  <td
-                    colSpan={2}
-                    className="px-6 py-4 whitespace-nowrap text-sm font-bold "
-                  >
-                    AÑO 2026
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    17 de enero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN PRESBITERIO WASH/DC/MD/VA/NC
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    23 de enero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO BRONX
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    24 de enero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO NJ SUR
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    30 de enero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO MANHATTAN
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    31 de enero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO BROOKLYN
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    6 de febrero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO NJ NORTE
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    13 de febrero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO NJ CENTRAL
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    14 de febrero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO MASS. NORTE
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    20 de febrero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO PENNSYLVANIA
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    21 de febrero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE CONVENCIÓN ACHC PRESBITERIO CONNECTICUT
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    27 de febrero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE CONVENCIÓN ACHC PRESBITERIO QUEENS/LI
-                  </td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    28 de febrero de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    PRE-CONVENCIÓN ACHC PRESBITERIO MASS. WEST
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    20 y 21 de marzo de 2026
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                    CONVENCIÓN INTERNACIONAL ACHC CLA
-                  </td>
-                </tr>
-              </tbody>
-            </table> */}
-          </div>
-        </div>
+        <AgendaTable agenda={agendaList} />
+        {/* TODO: reactivar cuando se suba el PDF de la agenda 2026-2027 a
+            /public/documentos (el archivo 2025-26 no existe y daba 404).
         <div className="flex justify-center space-x-4 mb-8">
           <Button asChild variant="secondary">
             <Link
-              href={"/documentos/agenda-2025-26-asociacion-de-caballeros.pdf"}
+              href={"/documentos/agenda-2026-27-asociacion-de-caballeros.pdf"}
             >
               Descargar Agenda de Eventos
             </Link>
           </Button>
-        </div>
+        </div> */}
         {/* <div className="text-center">
           <h1 className="text-4xl">Asociación de Caballeros</h1>
           <h2 className="text-2xl">Heraldos de Cristo C.L.A.</h2>
