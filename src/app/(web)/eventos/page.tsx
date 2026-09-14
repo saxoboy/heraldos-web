@@ -1,7 +1,11 @@
 import Image from "next/image";
 import TitleHeader from "@/components/title-header";
 import AgendaTable from "@/components/agenda-table";
-import { agendaList } from "@/data/agenda";
+import { getAgendaProxima } from "@/data/agenda";
+
+// La agenda oculta los eventos ya pasados, así que la página se regenera cada
+// hora en lugar de quedarse congelada en la fecha del build.
+export const revalidate = 3600;
 
 const EventosPage = () => {
   return (
@@ -30,7 +34,7 @@ const EventosPage = () => {
           </p>
         </header>
 
-        <AgendaTable agenda={agendaList} />
+        <AgendaTable agenda={getAgendaProxima()} />
         {/* TODO: reactivar cuando se suba el PDF de la agenda 2026-2027 a
             /public/documentos (el archivo 2025-26 no existe y daba 404).
         <div className="flex justify-center space-x-4 mb-8">

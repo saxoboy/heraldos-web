@@ -19,7 +19,7 @@ import AgendaTable from "@/components/agenda-table";
 
 //import "./embla.css";
 import { eventsList } from "@/data/events";
-import { agendaList } from "@/data/agenda";
+import { getAgendaProxima } from "@/data/agenda";
 import { noticiasList } from "@/data/noticias";
 
 export interface GaleryType {
@@ -69,18 +69,19 @@ const SLIDES: GaleryType[] = [
   },
 ];
 
+// La agenda oculta los eventos ya pasados, así que la página se regenera cada
+// hora en lugar de quedarse congelada en la fecha del build.
+export const revalidate = 3600;
+
 export default function Home() {
   const eventos = eventsList.slice(0, 3);
   const noticias = noticiasList
     .sort((a, b) => Number(b.id) - Number(a.id))
     .slice(1, 4);
   const noticiaDestacada = noticiasList[0];
-  // Eventos del año en curso; si el año ya terminó se muestra el siguiente
-  // año disponible en la agenda.
-  const anioActual = new Date().getFullYear();
-  const agendaAnioActual = agendaList
-    .filter((agenda) => agenda.year >= anioActual)
-    .slice(0, 1);
+  // Próximos eventos: getAgendaProxima ya descarta los que pasaron, así que
+  // basta con tomar el primer año que aún tenga eventos por delante.
+  const agendaAnioActual = getAgendaProxima().slice(0, 1);
 
   return (
     <>

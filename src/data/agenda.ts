@@ -1,9 +1,12 @@
 export interface AgendaItem {
   id: string;
+  /** Fecha de inicio en formato YYYY-MM-DD; tambien sirve de prefijo del id. */
   date: string;
   title: string;
   preacher?: string;
   highlight?: boolean;
+  /** Solo para eventos de varios dias: ultimo dia, en formato YYYY-MM-DD. */
+  endDate?: string;
 }
 
 export interface AgendaYear {
@@ -112,6 +115,7 @@ export const agendaList: AgendaYear[] = [
       {
         id: "2027-03-19",
         date: "19 y 20 de marzo de 2027",
+        endDate: "2027-03-20",
         title:
           "Convención Anual de la Asociación de Caballeros Heraldos de Cristo",
         highlight: true,
@@ -129,6 +133,7 @@ export const agendaList: AgendaYear[] = [
       {
         id: "2027-06-11-retiro",
         date: "11 y 12 de junio de 2027",
+        endDate: "2027-06-12",
         title: "Retiro de Líderes",
         highlight: true,
       },
@@ -140,6 +145,7 @@ export const agendaList: AgendaYear[] = [
       {
         id: "2027-08-20",
         date: "20 al 22 de agosto de 2027",
+        endDate: "2027-08-22",
         title: "Campamento de la Asociación de Caballeros",
         highlight: true,
       },
@@ -171,3 +177,24 @@ export const agendaList: AgendaYear[] = [
     ],
   },
 ];
+
+/** Fecha de hoy (YYYY-MM-DD) en la zona horaria de la Asociación. */
+const hoyLocal = () =>
+  new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York",
+  }).format(new Date());
+
+/**
+ * Agenda sin los eventos que ya pasaron. Un evento se mantiene visible todo su
+ * último día (endDate para los de varios días, la fecha del id para el resto),
+ * y los años que se quedan sin eventos desaparecen de la lista.
+ */
+export const getAgendaProxima = (hoy: string = hoyLocal()): AgendaYear[] =>
+  agendaList
+    .map((grupo) => ({
+      ...grupo,
+      items: grupo.items.filter(
+        (item) => (item.endDate ?? item.id.slice(0, 10)) >= hoy
+      ),
+    }))
+    .filter((grupo) => grupo.items.length > 0);

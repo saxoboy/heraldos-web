@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
-import { Facebook, Twitter } from "lucide-react";
+import { RiFacebookCircleLine, RiTwitterXLine } from "react-icons/ri";
 import TitleHeader from "@/components/title-header";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -54,12 +54,12 @@ const EventsPage: FC<EventsPageProps> = async ({ params }) => {
             <ShareLink
               href={`https://twitter.com/intent/tweet?url=https://heraldos-web.vercel.app/eventos/${event.slug}`}
               label="Twitter"
-              Icon={<Twitter />}
+              Icon={<RiTwitterXLine className="w-6 h-6" />}
             />
             <ShareLink
               href={`https://www.facebook.com/sharer/sharer.php?u=https://heraldos-web.vercel.app/eventos/${event.slug}`}
               label="Facebook"
-              Icon={<Facebook />}
+              Icon={<RiFacebookCircleLine className="w-6 h-6" />}
             />
           </div>
         </div>
