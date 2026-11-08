@@ -119,7 +119,7 @@ const JuntaEjecutivaPage = () => {
           <TitleHeader
             txtTitle="Ejecutiva"
             txtSubtitle="Junta Ejecutiva Internacional"
-            txtSubtitleTwo="2024-2025"
+            txtSubtitleTwo="2025-2026"
           />
           <p className="text-center text-lg">
             Asociación de Caballeros Heraldos de Cristo C.L.A.
