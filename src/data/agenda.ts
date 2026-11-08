@@ -157,7 +157,7 @@ export const agendaList: AgendaYear[] = [
       {
         id: "2027-10-08",
         date: "8 de octubre de 2027",
-        title: "Jubileo NNJ Central",
+        title: "Jubileo NJ Central",
       },
       {
         id: "2027-11-13",
